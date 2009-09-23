@@ -33,66 +33,64 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     jLabel1 = new javax.swing.JLabel();
     jPanel1 = new javax.swing.JPanel();
-    jCheckBox20 = new javax.swing.JCheckBox();
-    jCheckBox19 = new javax.swing.JCheckBox();
-    jCheckBox9 = new javax.swing.JCheckBox();
-    jCheckBox8 = new javax.swing.JCheckBox();
-    jCheckBox11 = new javax.swing.JCheckBox();
-    jCheckBox10 = new javax.swing.JCheckBox();
-    jCheckBox12 = new javax.swing.JCheckBox();
-    jCheckBox13 = new javax.swing.JCheckBox();
-    jCheckBox14 = new javax.swing.JCheckBox();
-    jCheckBox15 = new javax.swing.JCheckBox();
-    jCheckBox16 = new javax.swing.JCheckBox();
-    jCheckBox17 = new javax.swing.JCheckBox();
-    jCheckBox18 = new javax.swing.JCheckBox();
-    jCheckBox6 = new javax.swing.JCheckBox();
-    jCheckBox7 = new javax.swing.JCheckBox();
-    jCheckBox4 = new javax.swing.JCheckBox();
-    jCheckBox5 = new javax.swing.JCheckBox();
-    jCheckBox3 = new javax.swing.JCheckBox();
+    chkEDSAlreadyEngaged = new javax.swing.JCheckBox();
+    chkRequireOfficeOpening = new javax.swing.JCheckBox();
+    chkRequireIncreaseTransactions = new javax.swing.JCheckBox();
+    chkRequireSecurityException = new javax.swing.JCheckBox();
+    chkRequireReport = new javax.swing.JCheckBox();
+    chkRequireFirewallChange = new javax.swing.JCheckBox();
+    chkImpactHost = new javax.swing.JCheckBox();
+    chkRequireNewCircuit = new javax.swing.JCheckBox();
+    chkRequireWebHosting = new javax.swing.JCheckBox();
+    chkCRUDActiveDirectory = new javax.swing.JCheckBox();
+    chkRequireSSL = new javax.swing.JCheckBox();
+    chkRequireAccess2VAR = new javax.swing.JCheckBox();
+    chkRequireB2BVPN = new javax.swing.JCheckBox();
+    chkRequireApplicationChange = new javax.swing.JCheckBox();
+    chkInvolvePCI = new javax.swing.JCheckBox();
+    chkRequireHardware = new javax.swing.JCheckBox();
+    chkRequireStorage = new javax.swing.JCheckBox();
+    chkRequireNewSoftware = new javax.swing.JCheckBox();
     jPanel2 = new javax.swing.JPanel();
-    jComboBox2 = new javax.swing.JComboBox();
-    jComboBox3 = new javax.swing.JComboBox();
+    cmbBusinessUnit = new javax.swing.JComboBox();
+    cmbSystem = new javax.swing.JComboBox();
     jScrollPane1 = new javax.swing.JScrollPane();
-    jTextArea1 = new javax.swing.JTextArea();
-    jTextField6 = new javax.swing.JTextField();
-    jTextField7 = new javax.swing.JTextField();
+    txtRequestOverview = new javax.swing.JTextArea();
+    txtPrimaveraId = new javax.swing.JTextField();
+    txtFRCRId = new javax.swing.JTextField();
     jLabel10 = new javax.swing.JLabel();
     jLabel11 = new javax.swing.JLabel();
-    jTextField10 = new javax.swing.JTextField();
-    jLabel2 = new javax.swing.JLabel();
+    txtSEDIId = new javax.swing.JTextField();
     jLabel7 = new javax.swing.JLabel();
     jLabel6 = new javax.swing.JLabel();
     jLabel5 = new javax.swing.JLabel();
     jLabel4 = new javax.swing.JLabel();
     jLabel3 = new javax.swing.JLabel();
-    jTextField1 = new javax.swing.JTextField();
-    jComboBox1 = new javax.swing.JComboBox();
+    txtRequestTitle = new javax.swing.JTextField();
     jPanel3 = new javax.swing.JPanel();
     jLabel15 = new javax.swing.JLabel();
-    jTextField13 = new javax.swing.JTextField();
+    txtVP = new javax.swing.JTextField();
     jLabel14 = new javax.swing.JLabel();
-    jTextField12 = new javax.swing.JTextField();
+    txtRequestor = new javax.swing.JTextField();
     jLabel16 = new javax.swing.JLabel();
-    jTextField15 = new javax.swing.JTextField();
+    txtImplDate = new javax.swing.JTextField();
     jScrollPane2 = new javax.swing.JScrollPane();
-    jTextArea2 = new javax.swing.JTextArea();
+    txtRequirements = new javax.swing.JTextArea();
     jLabel9 = new javax.swing.JLabel();
-    jTextField8 = new javax.swing.JTextField();
-    jTextField9 = new javax.swing.JTextField();
+    txtSabrePR = new javax.swing.JTextField();
+    txtOwningCostCenter = new javax.swing.JTextField();
     jLabel12 = new javax.swing.JLabel();
-    jTextField11 = new javax.swing.JTextField();
+    txtFundingCostCenter = new javax.swing.JTextField();
     jLabel13 = new javax.swing.JLabel();
     jLabel8 = new javax.swing.JLabel();
-    jTextField5 = new javax.swing.JTextField();
+    txtSabreAR = new javax.swing.JTextField();
     jLabel17 = new javax.swing.JLabel();
-    jCheckBox1 = new javax.swing.JCheckBox();
-    jCheckBox2 = new javax.swing.JCheckBox();
+    chkRequestorLoggedUser = new javax.swing.JCheckBox();
+    chkImplDateASAP = new javax.swing.JCheckBox();
     jPanel4 = new javax.swing.JPanel();
-    jButton1 = new javax.swing.JButton();
-    jButton2 = new javax.swing.JButton();
-    jButton3 = new javax.swing.JButton();
+    btnSave = new javax.swing.JButton();
+    btnLoad = new javax.swing.JButton();
+    btnNew = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
@@ -100,56 +98,56 @@ public class NewSRTemplate extends javax.swing.JFrame {
     jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
     jLabel1.setText("New SR Template");
 
-    jCheckBox20.setText("EDS Already Engaged");
+    chkEDSAlreadyEngaged.setText("EDS Already Engaged");
 
-    jCheckBox19.setText("Require Office Opening");
+    chkRequireOfficeOpening.setText("Require Office Opening");
 
-    jCheckBox9.setText("Require Increase of transactions");
-    jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
+    chkRequireIncreaseTransactions.setText("Require Increase of transactions");
+    chkRequireIncreaseTransactions.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox9ActionPerformed(evt);
+        chkRequireIncreaseTransactionsActionPerformed(evt);
       }
     });
 
-    jCheckBox8.setText("Require Security Exception");
+    chkRequireSecurityException.setText("Require Security Exception");
 
-    jCheckBox11.setText("Require Report");
+    chkRequireReport.setText("Require Report");
 
-    jCheckBox10.setText("Require a Firewall Change");
+    chkRequireFirewallChange.setText("Require a Firewall Change");
 
-    jCheckBox12.setText("Impact Host");
-    jCheckBox12.addActionListener(new java.awt.event.ActionListener() {
+    chkImpactHost.setText("Impact Host");
+    chkImpactHost.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox12ActionPerformed(evt);
+        chkImpactHostActionPerformed(evt);
       }
     });
 
-    jCheckBox13.setText("Require new Circuit");
+    chkRequireNewCircuit.setText("Require new Circuit");
 
-    jCheckBox14.setText("Require a Web Hosting");
+    chkRequireWebHosting.setText("Require a Web Hosting");
 
-    jCheckBox15.setText("CRUD Active Directory");
+    chkCRUDActiveDirectory.setText("CRUD Active Directory");
 
-    jCheckBox16.setText("Require SSL");
+    chkRequireSSL.setText("Require SSL");
 
-    jCheckBox17.setText("Require access to VAR");
+    chkRequireAccess2VAR.setText("Require access to VAR");
 
-    jCheckBox18.setText("Require B2B VPN");
+    chkRequireB2BVPN.setText("Require B2B VPN");
 
-    jCheckBox6.setText("Require Application Change");
-    jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
+    chkRequireApplicationChange.setText("Require Application Change");
+    chkRequireApplicationChange.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox6ActionPerformed(evt);
+        chkRequireApplicationChangeActionPerformed(evt);
       }
     });
 
-    jCheckBox7.setText("Involve PCI/PII/SPI data");
+    chkInvolvePCI.setText("Involve PCI/PII/SPI data");
 
-    jCheckBox4.setText("Require Hardware");
+    chkRequireHardware.setText("Require Hardware");
 
-    jCheckBox5.setText("Require Storage");
+    chkRequireStorage.setText("Require Storage");
 
-    jCheckBox3.setText("Require new Sofware");
+    chkRequireNewSoftware.setText("Require new Sofware");
 
     javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
     jPanel1.setLayout(jPanel1Layout);
@@ -160,29 +158,29 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(jPanel1Layout.createSequentialGroup()
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jCheckBox3)
-              .addComponent(jCheckBox4)
-              .addComponent(jCheckBox6)
-              .addComponent(jCheckBox5)
-              .addComponent(jCheckBox10)
-              .addComponent(jCheckBox8))
+              .addComponent(chkRequireNewSoftware)
+              .addComponent(chkRequireHardware)
+              .addComponent(chkRequireApplicationChange)
+              .addComponent(chkRequireStorage)
+              .addComponent(chkRequireFirewallChange)
+              .addComponent(chkRequireSecurityException))
             .addGap(62, 62, 62)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jCheckBox18)
-              .addComponent(jCheckBox16)
-              .addComponent(jCheckBox17)
-              .addComponent(jCheckBox7)
-              .addComponent(jCheckBox9)
-              .addComponent(jCheckBox14)))
+              .addComponent(chkRequireB2BVPN)
+              .addComponent(chkRequireSSL)
+              .addComponent(chkRequireAccess2VAR)
+              .addComponent(chkInvolvePCI)
+              .addComponent(chkRequireIncreaseTransactions)
+              .addComponent(chkRequireWebHosting)))
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
             .addGap(453, 453, 453)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jCheckBox13)
-              .addComponent(jCheckBox12)
-              .addComponent(jCheckBox15)
-              .addComponent(jCheckBox11)
-              .addComponent(jCheckBox19)
-              .addComponent(jCheckBox20))))
+              .addComponent(chkRequireNewCircuit)
+              .addComponent(chkImpactHost)
+              .addComponent(chkCRUDActiveDirectory)
+              .addComponent(chkRequireReport)
+              .addComponent(chkRequireOfficeOpening)
+              .addComponent(chkEDSAlreadyEngaged))))
         .addContainerGap(49, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
@@ -192,57 +190,57 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-              .addComponent(jCheckBox4)
+              .addComponent(chkRequireHardware)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox3)
+              .addComponent(chkRequireNewSoftware)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox5)
+              .addComponent(chkRequireStorage)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox6)
+              .addComponent(chkRequireApplicationChange)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox8)
+              .addComponent(chkRequireSecurityException)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox10))
+              .addComponent(chkRequireFirewallChange))
             .addGroup(jPanel1Layout.createSequentialGroup()
-              .addComponent(jCheckBox9)
+              .addComponent(chkRequireIncreaseTransactions)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox7)
+              .addComponent(chkInvolvePCI)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox16)
+              .addComponent(chkRequireSSL)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox18)
+              .addComponent(chkRequireB2BVPN)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox17)
+              .addComponent(chkRequireAccess2VAR)
               .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jCheckBox14)))
+              .addComponent(chkRequireWebHosting)))
           .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(jCheckBox12)
+            .addComponent(chkImpactHost)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jCheckBox13)
+            .addComponent(chkRequireNewCircuit)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jCheckBox11)
+            .addComponent(chkRequireReport)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jCheckBox15)
+            .addComponent(chkCRUDActiveDirectory)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jCheckBox19)
+            .addComponent(chkRequireOfficeOpening)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jCheckBox20)))
+            .addComponent(chkEDSAlreadyEngaged)))
         .addContainerGap(23, Short.MAX_VALUE))
     );
 
-    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    chkRequireB2BVPN.getAccessibleContext().setAccessibleDescription("null");
 
-    jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    cmbBusinessUnit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Airline Solutions" }));
 
-    jTextArea1.setColumns(20);
-    jTextArea1.setRows(5);
-    jScrollPane1.setViewportView(jTextArea1);
+    cmbSystem.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "eMergo" }));
+
+    txtRequestOverview.setColumns(20);
+    txtRequestOverview.setRows(5);
+    jScrollPane1.setViewportView(txtRequestOverview);
 
     jLabel10.setText("FRCR #");
 
     jLabel11.setText("SEDI #");
-
-    jLabel2.setText("SR Type");
 
     jLabel7.setText("Primavera ID");
 
@@ -254,16 +252,9 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     jLabel3.setText("Request Title");
 
-    jTextField1.addActionListener(new java.awt.event.ActionListener() {
+    txtRequestTitle.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField1ActionPerformed(evt);
-      }
-    });
-
-    jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-    jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jComboBox1ActionPerformed(evt);
+        txtRequestTitleActionPerformed(evt);
       }
     });
 
@@ -274,26 +265,24 @@ public class NewSRTemplate extends javax.swing.JFrame {
       .addGroup(jPanel2Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabel10)
+          .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addGroup(jPanel2Layout.createSequentialGroup()
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel3)
-              .addComponent(jLabel2)
-              .addComponent(jLabel7)
-              .addComponent(jLabel5)
-              .addComponent(jLabel6)
-              .addComponent(jLabel4)
-              .addComponent(jLabel11))
+              .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(18, 18, 18)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jComboBox1, 0, 216, Short.MAX_VALUE)
-              .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-              .addComponent(jComboBox2, 0, 216, Short.MAX_VALUE)
-              .addComponent(jComboBox3, 0, 216, Short.MAX_VALUE)
-              .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-              .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-              .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-              .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE))))
+              .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
         .addContainerGap())
     );
     jPanel2Layout.setVerticalGroup(
@@ -301,37 +290,33 @@ public class NewSRTemplate extends javax.swing.JFrame {
       .addGroup(jPanel2Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel2)
-          .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel3)
-          .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel4))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel6))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel5))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel7))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel10)
-          .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel11)
-          .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(41, Short.MAX_VALUE))
+          .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap(69, Short.MAX_VALUE))
     );
 
     jLabel15.setText("VP/Senior Vp");
@@ -340,9 +325,9 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     jLabel16.setText("Requirements");
 
-    jTextArea2.setColumns(20);
-    jTextArea2.setRows(5);
-    jScrollPane2.setViewportView(jTextArea2);
+    txtRequirements.setColumns(20);
+    txtRequirements.setRows(5);
+    jScrollPane2.setViewportView(txtRequirements);
 
     jLabel9.setText("Sabre PR");
 
@@ -354,17 +339,17 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     jLabel17.setText("Impl. Date");
 
-    jCheckBox1.setText("Logged User");
-    jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+    chkRequestorLoggedUser.setText("Logged User");
+    chkRequestorLoggedUser.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox1ActionPerformed(evt);
+        chkRequestorLoggedUserActionPerformed(evt);
       }
     });
 
-    jCheckBox2.setText("ASAP");
-    jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+    chkImplDateASAP.setText("ASAP");
+    chkImplDateASAP.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jCheckBox2ActionPerformed(evt);
+        chkImplDateASAPActionPerformed(evt);
       }
     });
 
@@ -375,36 +360,36 @@ public class NewSRTemplate extends javax.swing.JFrame {
       .addGroup(jPanel3Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addGroup(jPanel3Layout.createSequentialGroup()
-            .addComponent(jLabel17)
-            .addGap(53, 53, 53)
-            .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE))
+          .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(txtImplDate, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel12)
-              .addComponent(jLabel14)
-              .addComponent(jLabel13)
-              .addComponent(jLabel15)
-              .addComponent(jLabel16))
+              .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jTextField13, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
-              .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
-              .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
-              .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
-              .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)))
+              .addComponent(txtVP, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtRequestor, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtFundingCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtOwningCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
           .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel8)
-              .addComponent(jLabel9))
-            .addGap(58, 58, 58)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(jTextField8)
-              .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))))
+              .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(txtSabreAR, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtSabrePR, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jCheckBox2)
-          .addComponent(jCheckBox1))
+          .addComponent(chkImplDateASAP)
+          .addComponent(chkRequestorLoggedUser))
         .addContainerGap())
     );
     jPanel3Layout.setVerticalGroup(
@@ -413,45 +398,45 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addContainerGap()
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel8)
-          .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtSabreAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel9)
-          .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtSabrePR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGap(3, 3, 3)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel12)
-          .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtOwningCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel14)
-          .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtFundingCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel13)
-          .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jCheckBox1))
+          .addComponent(txtRequestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(chkRequestorLoggedUser))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel15)
-          .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtVP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabel16)
+          .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel17)
-          .addComponent(jCheckBox2))
+          .addComponent(chkImplDateASAP)
+          .addComponent(txtImplDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addContainerGap(48, Short.MAX_VALUE))
     );
 
-    jButton1.setText("Save");
+    btnSave.setText("Save");
 
-    jButton2.setText("Load");
+    btnLoad.setText("Load");
 
-    jButton3.setText("New");
+    btnNew.setText("New");
 
     javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
     jPanel4.setLayout(jPanel4Layout);
@@ -460,20 +445,20 @@ public class NewSRTemplate extends javax.swing.JFrame {
       .addGroup(jPanel4Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-          .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-          .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE))
+          .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+          .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
         .addContainerGap())
     );
     jPanel4Layout.setVerticalGroup(
       jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel4Layout.createSequentialGroup()
         .addContainerGap()
-        .addComponent(jButton1)
+        .addComponent(btnSave)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(jButton2)
+        .addComponent(btnLoad)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(jButton3)
+        .addComponent(btnNew)
         .addContainerGap(76, Short.MAX_VALUE))
     );
 
@@ -518,33 +503,29 @@ public class NewSRTemplate extends javax.swing.JFrame {
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void chkRequestorLoggedUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRequestorLoggedUserActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_chkRequestorLoggedUserActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void chkImplDateASAPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkImplDateASAPActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_chkImplDateASAPActionPerformed
 
-    private void jCheckBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox6ActionPerformed
+    private void chkRequireApplicationChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRequireApplicationChangeActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox6ActionPerformed
+    }//GEN-LAST:event_chkRequireApplicationChangeActionPerformed
 
-    private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
+    private void chkRequireIncreaseTransactionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkRequireIncreaseTransactionsActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox9ActionPerformed
+    }//GEN-LAST:event_chkRequireIncreaseTransactionsActionPerformed
 
-    private void jCheckBox12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox12ActionPerformed
+    private void chkImpactHostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkImpactHostActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox12ActionPerformed
+    }//GEN-LAST:event_chkImpactHostActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void txtRequestTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRequestTitleActionPerformed
       // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtRequestTitleActionPerformed
 
     /**
     * @param args the command line arguments
@@ -558,32 +539,31 @@ public class NewSRTemplate extends javax.swing.JFrame {
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton jButton1;
-  private javax.swing.JButton jButton2;
-  private javax.swing.JButton jButton3;
-  private javax.swing.JCheckBox jCheckBox1;
-  private javax.swing.JCheckBox jCheckBox10;
-  private javax.swing.JCheckBox jCheckBox11;
-  private javax.swing.JCheckBox jCheckBox12;
-  private javax.swing.JCheckBox jCheckBox13;
-  private javax.swing.JCheckBox jCheckBox14;
-  private javax.swing.JCheckBox jCheckBox15;
-  private javax.swing.JCheckBox jCheckBox16;
-  private javax.swing.JCheckBox jCheckBox17;
-  private javax.swing.JCheckBox jCheckBox18;
-  private javax.swing.JCheckBox jCheckBox19;
-  private javax.swing.JCheckBox jCheckBox2;
-  private javax.swing.JCheckBox jCheckBox20;
-  private javax.swing.JCheckBox jCheckBox3;
-  private javax.swing.JCheckBox jCheckBox4;
-  private javax.swing.JCheckBox jCheckBox5;
-  private javax.swing.JCheckBox jCheckBox6;
-  private javax.swing.JCheckBox jCheckBox7;
-  private javax.swing.JCheckBox jCheckBox8;
-  private javax.swing.JCheckBox jCheckBox9;
-  private javax.swing.JComboBox jComboBox1;
-  private javax.swing.JComboBox jComboBox2;
-  private javax.swing.JComboBox jComboBox3;
+  private javax.swing.JButton btnLoad;
+  private javax.swing.JButton btnNew;
+  private javax.swing.JButton btnSave;
+  private javax.swing.JCheckBox chkCRUDActiveDirectory;
+  private javax.swing.JCheckBox chkEDSAlreadyEngaged;
+  private javax.swing.JCheckBox chkImpactHost;
+  private javax.swing.JCheckBox chkImplDateASAP;
+  private javax.swing.JCheckBox chkInvolvePCI;
+  private javax.swing.JCheckBox chkRequestorLoggedUser;
+  private javax.swing.JCheckBox chkRequireAccess2VAR;
+  private javax.swing.JCheckBox chkRequireApplicationChange;
+  private javax.swing.JCheckBox chkRequireB2BVPN;
+  private javax.swing.JCheckBox chkRequireFirewallChange;
+  private javax.swing.JCheckBox chkRequireHardware;
+  private javax.swing.JCheckBox chkRequireIncreaseTransactions;
+  private javax.swing.JCheckBox chkRequireNewCircuit;
+  private javax.swing.JCheckBox chkRequireNewSoftware;
+  private javax.swing.JCheckBox chkRequireOfficeOpening;
+  private javax.swing.JCheckBox chkRequireReport;
+  private javax.swing.JCheckBox chkRequireSSL;
+  private javax.swing.JCheckBox chkRequireSecurityException;
+  private javax.swing.JCheckBox chkRequireStorage;
+  private javax.swing.JCheckBox chkRequireWebHosting;
+  private javax.swing.JComboBox cmbBusinessUnit;
+  private javax.swing.JComboBox cmbSystem;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel10;
   private javax.swing.JLabel jLabel11;
@@ -593,7 +573,6 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JLabel jLabel15;
   private javax.swing.JLabel jLabel16;
   private javax.swing.JLabel jLabel17;
-  private javax.swing.JLabel jLabel2;
   private javax.swing.JLabel jLabel3;
   private javax.swing.JLabel jLabel4;
   private javax.swing.JLabel jLabel5;
@@ -607,19 +586,19 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JPanel jPanel4;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JScrollPane jScrollPane2;
-  private javax.swing.JTextArea jTextArea1;
-  private javax.swing.JTextArea jTextArea2;
-  private javax.swing.JTextField jTextField1;
-  private javax.swing.JTextField jTextField10;
-  private javax.swing.JTextField jTextField11;
-  private javax.swing.JTextField jTextField12;
-  private javax.swing.JTextField jTextField13;
-  private javax.swing.JTextField jTextField15;
-  private javax.swing.JTextField jTextField5;
-  private javax.swing.JTextField jTextField6;
-  private javax.swing.JTextField jTextField7;
-  private javax.swing.JTextField jTextField8;
-  private javax.swing.JTextField jTextField9;
+  private javax.swing.JTextField txtFRCRId;
+  private javax.swing.JTextField txtFundingCostCenter;
+  private javax.swing.JTextField txtImplDate;
+  private javax.swing.JTextField txtOwningCostCenter;
+  private javax.swing.JTextField txtPrimaveraId;
+  private javax.swing.JTextArea txtRequestOverview;
+  private javax.swing.JTextField txtRequestTitle;
+  private javax.swing.JTextField txtRequestor;
+  private javax.swing.JTextArea txtRequirements;
+  private javax.swing.JTextField txtSEDIId;
+  private javax.swing.JTextField txtSabreAR;
+  private javax.swing.JTextField txtSabrePR;
+  private javax.swing.JTextField txtVP;
   // End of variables declaration//GEN-END:variables
 
 }

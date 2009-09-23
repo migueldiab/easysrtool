@@ -9,7 +9,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,49,0,0,3,38"/>
+    <SyntheticProperty name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,49,0,0,3,115"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -91,32 +91,32 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jCheckBox3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox10" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox8" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireNewSoftware" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireHardware" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireApplicationChange" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireStorage" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireFirewallChange" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireSecurityException" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jCheckBox18" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox16" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox17" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox9" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox14" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireB2BVPN" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireSSL" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireAccess2VAR" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkInvolvePCI" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireIncreaseTransactions" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireWebHosting" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="453" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jCheckBox13" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox12" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox11" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox19" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBox20" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireNewCircuit" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkImpactHost" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkCRUDActiveDirectory" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireReport" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireOfficeOpening" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkEDSAlreadyEngaged" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -131,44 +131,44 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireHardware" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireNewSoftware" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireStorage" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireApplicationChange" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox8" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireSecurityException" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox10" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireFirewallChange" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jCheckBox9" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireIncreaseTransactions" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkInvolvePCI" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox16" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireSSL" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox18" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireB2BVPN" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox17" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireAccess2VAR" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox14" min="-2" max="-2" attributes="0"/>
+                              <Component id="chkRequireWebHosting" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jCheckBox12" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkImpactHost" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox13" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkRequireNewCircuit" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox11" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkRequireReport" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox15" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkCRUDActiveDirectory" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox19" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkRequireOfficeOpening" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jCheckBox20" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkEDSAlreadyEngaged" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="23" max="32767" attributes="0"/>
@@ -177,101 +177,104 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox20">
+        <Component class="javax.swing.JCheckBox" name="chkEDSAlreadyEngaged">
           <Properties>
             <Property name="text" type="java.lang.String" value="EDS Already Engaged"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox19">
+        <Component class="javax.swing.JCheckBox" name="chkRequireOfficeOpening">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Office Opening"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox9">
+        <Component class="javax.swing.JCheckBox" name="chkRequireIncreaseTransactions">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Increase of transactions"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox9ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkRequireIncreaseTransactionsActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox8">
+        <Component class="javax.swing.JCheckBox" name="chkRequireSecurityException">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Security Exception"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox11">
+        <Component class="javax.swing.JCheckBox" name="chkRequireReport">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Report"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox10">
+        <Component class="javax.swing.JCheckBox" name="chkRequireFirewallChange">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require a Firewall Change"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox12">
+        <Component class="javax.swing.JCheckBox" name="chkImpactHost">
           <Properties>
             <Property name="text" type="java.lang.String" value="Impact Host"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox12ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkImpactHostActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox13">
+        <Component class="javax.swing.JCheckBox" name="chkRequireNewCircuit">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require new Circuit"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox14">
+        <Component class="javax.swing.JCheckBox" name="chkRequireWebHosting">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require a Web Hosting"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox15">
+        <Component class="javax.swing.JCheckBox" name="chkCRUDActiveDirectory">
           <Properties>
             <Property name="text" type="java.lang.String" value="CRUD Active Directory"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox16">
+        <Component class="javax.swing.JCheckBox" name="chkRequireSSL">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require SSL"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox17">
+        <Component class="javax.swing.JCheckBox" name="chkRequireAccess2VAR">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require access to VAR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox18">
+        <Component class="javax.swing.JCheckBox" name="chkRequireB2BVPN">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require B2B VPN"/>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="null"/>
+          </AccessibilityProperties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+        <Component class="javax.swing.JCheckBox" name="chkRequireApplicationChange">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Application Change"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox6ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkRequireApplicationChangeActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox7">
+        <Component class="javax.swing.JCheckBox" name="chkInvolvePCI">
           <Properties>
             <Property name="text" type="java.lang.String" value="Involve PCI/PII/SPI data"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+        <Component class="javax.swing.JCheckBox" name="chkRequireHardware">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Hardware"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+        <Component class="javax.swing.JCheckBox" name="chkRequireStorage">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require Storage"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+        <Component class="javax.swing.JCheckBox" name="chkRequireNewSoftware">
           <Properties>
             <Property name="text" type="java.lang.String" value="Require new Sofware"/>
           </Properties>
@@ -286,27 +289,25 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel10" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel3" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel7" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel6" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel11" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jComboBox1" alignment="0" pref="216" max="32767" attributes="1"/>
-                              <Component id="jTextField1" alignment="0" pref="216" max="32767" attributes="1"/>
-                              <Component id="jComboBox2" alignment="0" pref="216" max="32767" attributes="1"/>
-                              <Component id="jComboBox3" alignment="0" pref="216" max="32767" attributes="1"/>
-                              <Component id="jTextField6" alignment="0" pref="216" max="32767" attributes="1"/>
-                              <Component id="jScrollPane1" alignment="0" pref="216" max="32767" attributes="0"/>
-                              <Component id="jTextField7" alignment="0" pref="216" max="32767" attributes="1"/>
-                              <Component id="jTextField10" alignment="0" pref="216" max="32767" attributes="1"/>
+                              <Component id="txtRequestTitle" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="cmbBusinessUnit" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="cmbSystem" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="txtPrimaveraId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="jScrollPane1" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="txtFRCRId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="txtSEDIId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
                           </Group>
                       </Group>
                   </Group>
@@ -319,13 +320,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtRequestTitle" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -334,55 +330,49 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmbBusinessUnit" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmbSystem" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPrimaveraId" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtFRCRId" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSEDIId" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="41" max="32767" attributes="0"/>
+                  <EmptySpace pref="69" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JComboBox" name="jComboBox2">
+        <Component class="javax.swing.JComboBox" name="cmbBusinessUnit">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="1">
+                <StringItem index="0" value="Airline Solutions"/>
               </StringArray>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox3">
+        <Component class="javax.swing.JComboBox" name="cmbSystem">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="1">
+                <StringItem index="0" value="eMergo"/>
               </StringArray>
             </Property>
           </Properties>
@@ -394,7 +384,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" name="txtRequestOverview">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -402,9 +392,9 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JTextField" name="jTextField6">
+        <Component class="javax.swing.JTextField" name="txtPrimaveraId">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField7">
+        <Component class="javax.swing.JTextField" name="txtFRCRId">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -416,12 +406,7 @@
             <Property name="text" type="java.lang.String" value="SEDI #"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField10">
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="SR Type"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtSEDIId">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
@@ -448,24 +433,9 @@
             <Property name="text" type="java.lang.String" value="Request Title"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="txtRequestTitle">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRequestTitleActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -478,44 +448,44 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                          <Component id="jTextField15" pref="219" max="32767" attributes="1"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel17" min="-2" pref="130" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="txtImplDate" min="-2" pref="220" max="-2" attributes="1"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel12" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel14" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel15" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel16" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField13" alignment="0" pref="219" max="32767" attributes="1"/>
-                              <Component id="jTextField12" alignment="0" pref="219" max="32767" attributes="1"/>
-                              <Component id="jTextField11" alignment="0" pref="219" max="32767" attributes="1"/>
-                              <Component id="jScrollPane2" alignment="0" pref="219" max="32767" attributes="0"/>
-                              <Component id="jTextField9" alignment="0" pref="219" max="32767" attributes="1"/>
+                              <Component id="txtVP" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="txtRequestor" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="txtFundingCostCenter" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="jScrollPane2" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="txtOwningCostCenter" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel8" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jLabel9" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jTextField8" max="32767" attributes="1"/>
-                              <Component id="jTextField5" alignment="0" min="-2" pref="219" max="-2" attributes="1"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtSabreAR" min="-2" pref="220" max="-2" attributes="1"/>
+                              <Component id="txtSabrePR" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
                           </Group>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkImplDateASAP" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkRequestorLoggedUser" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -527,44 +497,44 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSabreAR" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSabrePR" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtOwningCostCenter" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtFundingCostCenter" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtRequestor" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkRequestorLoggedUser" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtVP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel16" min="-2" pref="96" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkImplDateASAP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtImplDate" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="48" max="32767" attributes="0"/>
               </Group>
@@ -577,21 +547,21 @@
             <Property name="text" type="java.lang.String" value="VP/Senior Vp"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField13">
+        <Component class="javax.swing.JTextField" name="txtVP">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel14">
           <Properties>
             <Property name="text" type="java.lang.String" value="Funding Cost Center"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField12">
+        <Component class="javax.swing.JTextField" name="txtRequestor">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel16">
           <Properties>
             <Property name="text" type="java.lang.String" value="Requirements"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField15">
+        <Component class="javax.swing.JTextField" name="txtImplDate">
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <AuxValues>
@@ -600,7 +570,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea2">
+            <Component class="javax.swing.JTextArea" name="txtRequirements">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -613,16 +583,16 @@
             <Property name="text" type="java.lang.String" value="Sabre PR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField8">
+        <Component class="javax.swing.JTextField" name="txtSabrePR">
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField9">
+        <Component class="javax.swing.JTextField" name="txtOwningCostCenter">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
             <Property name="text" type="java.lang.String" value="Owning Cost Center"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField11">
+        <Component class="javax.swing.JTextField" name="txtFundingCostCenter">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel13">
           <Properties>
@@ -634,27 +604,27 @@
             <Property name="text" type="java.lang.String" value="Sabre AR"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField5">
+        <Component class="javax.swing.JTextField" name="txtSabreAR">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel17">
           <Properties>
             <Property name="text" type="java.lang.String" value="Impl. Date"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="chkRequestorLoggedUser">
           <Properties>
             <Property name="text" type="java.lang.String" value="Logged User"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkRequestorLoggedUserActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+        <Component class="javax.swing.JCheckBox" name="chkImplDateASAP">
           <Properties>
             <Property name="text" type="java.lang.String" value="ASAP"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkImplDateASAPActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -667,9 +637,9 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" alignment="0" pref="115" max="32767" attributes="0"/>
-                      <Component id="jButton2" alignment="1" pref="115" max="32767" attributes="0"/>
-                      <Component id="jButton3" alignment="1" pref="115" max="32767" attributes="0"/>
+                      <Component id="btnSave" alignment="0" pref="192" max="32767" attributes="0"/>
+                      <Component id="btnLoad" alignment="1" pref="192" max="32767" attributes="0"/>
+                      <Component id="btnNew" alignment="1" pref="192" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -679,28 +649,28 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSave" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLoad" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnNew" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="76" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnSave">
           <Properties>
             <Property name="text" type="java.lang.String" value="Save"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btnLoad">
           <Properties>
             <Property name="text" type="java.lang.String" value="Load"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="btnNew">
           <Properties>
             <Property name="text" type="java.lang.String" value="New"/>
           </Properties>
