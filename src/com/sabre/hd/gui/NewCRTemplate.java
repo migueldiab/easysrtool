@@ -230,21 +230,17 @@ public class NewCRTemplate extends javax.swing.JFrame {
 
         jLabel8.setText("Environment");
 
-        cmbEnvironment.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbEnvironment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbEnvironmentActionPerformed(evt);
             }
         });
 
-        cmbSponsor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cmbSponsor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbSponsorActionPerformed(evt);
             }
         });
-
-        cmbRequestedType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel6.setText("Sponsor");
 
@@ -270,15 +266,11 @@ public class NewCRTemplate extends javax.swing.JFrame {
 
         jLabel1.setText("Phone Number");
 
-        cmbCurrentStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         cmbChangeName.setText(" ");
 
         jLabel2.setText("External Reference ID");
 
         jLabel29.setText("State");
-
-        cmbState.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel12.setText("Description");
 
@@ -454,15 +446,9 @@ public class NewCRTemplate extends javax.swing.JFrame {
 
         jLabel30.setText("Component Type");
 
-        cmbComponentType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         txtEmployeeID.setText(" ");
 
-        cmbActivity.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel32.setText("Risk Reason");
-
-        cmbPriority.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jTextField5.setText(" ");
 
@@ -470,13 +456,6 @@ public class NewCRTemplate extends javax.swing.JFrame {
 
         jLabel5.setText("Developer/Vendor");
 
-        cmbDeveloperVendor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        cmbAssets.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane2.setViewportView(cmbAssets);
 
         jLabel14.setText("Customers Impacted");
