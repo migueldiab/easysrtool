@@ -79,11 +79,11 @@ public class ChangeRequest extends PersistentObject{
   private String coveragePagerNumber;
   private String falPhoneNumber;
 
-  private Date startDate;
-  private Date startTime;
-  private Date endDate;
-  private Date endTime;
-  private Date duration;
+  private String startDate;
+  private String startTime;
+  private String endDate;
+  private String endTime;
+  private String duration;
 
   private boolean changeRelatesToFirewall;
   private boolean emergencyChange;
@@ -105,6 +105,81 @@ public class ChangeRequest extends PersistentObject{
   }
 
   public ChangeRequest(){
+  }
+
+  public ChangeRequest (String phoneNumber,String emailAddress,String externalReferenceId,String employeeId,String managerId,String developerVendor,String sponsor,String serviceRequestId,String environment,String implementationLocation,String changeName,String assets,String description,String potentialCustomersImpacted,String associatedProblem,String componentType,String activity,String priority,String currentStatus,String riskReason,String state,String changeCategory,String changeJustification,String HSIS,String ECO,String LMR,String other,String requestedType,String impactDescription,String customerImpact,String installationProcedures,String fallbackProcedures,String primaryCoordinatorName,String primaryEmailAddress,String secondaryName,String secondaryEmailAddress,String installerId,String businessUnitDirector,String budEmailAddress,String coverageName,String coverageEmailAddress,String funcationalAreaLead,String falEmailAddress,String primaryPhoneNumber,String secondaryPhoneNumber,String budPhoneNumber,String coveragePhoneNumber,String coveragePagerNumber,String falPhoneNumber,String startDate,String startTime,String endDate,String endTime,String duration,boolean changeRelatesToFirewall,boolean emergencyChange,boolean affectsMultilpeCustomers,boolean newActivity,boolean moreThanOneTechnicalTeamRequired,boolean affectsCriticalHardware,boolean significantChange,boolean asap,boolean endTimeDefault, int  potentialImpact,int  potentialRisk){
+
+    this.setPhoneNumber(phoneNumber);
+    this.setEmailAddress(emailAddress);
+    this.setExternalReferenceId(externalReferenceId);
+    this.setEmployeeId(employeeId);
+    this.setManagerId(managerId);
+    this.setDeveloperVendor(developerVendor);
+    this.setSponsor(sponsor);
+    this.setServiceRequestId(serviceRequestId);
+    this.setEnvironment(environment);
+    this.setImplementationLocation(implementationLocation);
+    this.setChangeName(changeName);
+    this.setAssets(assets);
+    this.setDescription(description);
+    this.setPotentialCustomersImpacted(potentialCustomersImpacted);
+    this.setAssociatedProblem(associatedProblem);
+    this.setComponentType(componentType);
+    this.setActivity(activity);
+    this.setPriority(priority);
+    this.setCurrentStatus(currentStatus);
+    this.setRiskReason(riskReason);
+    this.setState(state);
+    this.setChangeCategory(changeCategory);
+    this.setChangeJustification(changeJustification);
+    this.setHSIS(HSIS);
+    this.setECO(ECO);
+    this.setLMR(LMR);
+    this.setOther(other);
+    this.setRequestedType(requestedType);
+    this.setImpactDescription(impactDescription);
+    this.setCustomerImpact(customerImpact);
+    this.setInstallationProcedures(installationProcedures);
+    this.setFallbackProcedures(fallbackProcedures);
+
+    this.setPrimaryCoordinatorName(primaryCoordinatorName);
+    this.setPrimaryEmailAddress(primaryEmailAddress);
+    this.setSecondaryName(secondaryName);
+    this.setSecondaryEmailAddress(secondaryEmailAddress);
+    this.setInstallerId(installerId);
+    this.setBusinessUnitDirector(businessUnitDirector);
+    this.setBudEmailAddress(budEmailAddress);
+    this.setCoverageName(coverageName);
+    this.setCoverageEmailAddress(coverageEmailAddress);
+    this.setFuncationalAreaLead(funcationalAreaLead);
+    this.setFalEmailAddress(falEmailAddress);
+
+    this.setPrimaryPhoneNumber(primaryPhoneNumber);
+    this.setSecondaryPhoneNumber(secondaryPhoneNumber);
+    this.setBudPhoneNumber(budPhoneNumber);
+    this.setCoveragePhoneNumber(coveragePhoneNumber);
+    this.setCoveragePagerNumber(coveragePagerNumber);
+    this.setFalPhoneNumber(falPhoneNumber);
+
+    this.setStartDate(startDate);
+    this.setStartTime(startTime);
+    this.setEndDate(endDate);
+    this.setEndTime(endTime);
+    this.setDuration(duration);
+
+    this.setChangeRelatesToFirewall(changeRelatesToFirewall);
+    this.setEmergencyChange(emergencyChange);
+    this.setAffectsMultilpeCustomers(affectsMultilpeCustomers);
+    this.setNewActivity(newActivity);
+    this.setMoreThanOneTechnicalTeamRequired(moreThanOneTechnicalTeamRequired);
+    this.setAffectsCriticalHardware(affectsCriticalHardware);
+    this.setSignificantChange(significantChange);
+    this.setAsap(asap);
+    this.setEndTimeDefault(endTimeDefault);
+
+    this.setPotentialImpact(potentialImpact);
+    this.setPotentialRisk(potentialRisk);     
+
   }
 
   public static void launchCRCreation() {
@@ -836,70 +911,70 @@ public class ChangeRequest extends PersistentObject{
     /**
      * @return the startDate
      */
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
     /**
      * @param startDate the startDate to set
      */
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
     /**
      * @return the startTime
      */
-    public Date getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
     /**
      * @param startTime the startTime to set
      */
-    public void setStartTime(Date startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
     /**
      * @return the endDate
      */
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
      * @param endDate the endDate to set
      */
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
     /**
      * @return the endTime
      */
-    public Date getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
     /**
      * @param endTime the endTime to set
      */
-    public void setEndTime(Date endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 
     /**
      * @return the duration
      */
-    public Date getDuration() {
+    public String getDuration() {
         return duration;
     }
 
     /**
      * @param duration the duration to set
      */
-    public void setDuration(Date duration) {
+    public void setDuration(String duration) {
         this.duration = duration;
     }
 
