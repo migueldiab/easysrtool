@@ -51,7 +51,7 @@ public class ServiceRequest extends PersistentObject{
 
 
   public static boolean save() {
-    throw new UnsupportedOperationException("Not yet implemented");
+    return true;
   }
 
   
