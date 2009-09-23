@@ -23,7 +23,7 @@ public class EasySR {
 //			gt.run();
 //			gt.finish();
 
-      Main ventanaMain = new Main();
+      EasySRMain ventanaMain = new EasySRMain();
       ventanaMain.setVisible(true);
 			
 		}catch (Exception e){

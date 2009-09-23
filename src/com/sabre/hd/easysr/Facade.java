@@ -6,6 +6,7 @@
 package com.sabre.hd.easysr;
 
 import com.sabre.hd.easysr.formLogic.SRLogic;
+import com.sabre.hd.gui.NewSRTemplate;
 
 /**
  *
@@ -16,5 +17,12 @@ public class Facade {
   public static void createMySR() {
     SRLogic.createMySR();
   }
+
+  public static void newSRTemplate() {
+    NewSRTemplate ventanaNewSRTemplate = new NewSRTemplate();
+    ventanaNewSRTemplate.setVisible(true);
+  }
+
+
 
 }
