@@ -11,6 +11,10 @@
 
 package com.sabre.hd.gui;
 
+import com.sabre.hd.easysr.forms.EcpmNewChange;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author SG0894180
@@ -72,7 +76,14 @@ public class Main extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      // TODO add your handling code here:
+      EcpmNewChange f1 = new EcpmNewChange();
+      try {
+        f1.load();
+        f1.run();
+        f1.finish();
+      } catch (Exception ex) {
+        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

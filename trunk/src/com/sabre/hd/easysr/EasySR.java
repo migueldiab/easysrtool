@@ -25,12 +25,6 @@ public class EasySR {
 
       Main ventanaMain = new Main();
       ventanaMain.setVisible(true);
-      
-//			EcpmNewChange f1 = new EcpmNewChange();
-//			f1.load();
-//			f1.run();
-//			f1.finish();
-			
 			
 		}catch (Exception e){
 			logger.error(e);
