@@ -86,13 +86,11 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 			rs = stmtSelect.executeQuery();
 			if (rs.next()) {
 				
-                //TODO: Remplazar con constructor adecuado
-                        result = new ServiceRequest(
-                                rs.getString("attrName1"),
-                                rs.getString("attrName2"),
-				rs.getDate("attrName3")
-
-				);
+      //TODO: Remplazar con constructor adecuado
+//      result = new ServiceRequest(
+//              rs.getString("attrName1"),
+//              rs.getString("attrName2"),
+//              rs.getDate("attrName3")   );
 
 				
 			} else {
@@ -215,11 +213,11 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 
 			stmtSelect = conn.prepareStatement(sbSelect.toString());
 			rs = stmtSelect.executeQuery();
-			while (rs.next()) {
-				//TODO: Remplazar con constructor adecuado				/*ServiceRequest servicerequest = new ServiceRequest(rs.getString("AttrName1"),
-						rs.getDate("AttrName2"));
-				result.add(servicerequest); */
-			}
+//			while (rs.next()) {
+//				//TODO: Remplazar con constructor adecuado				/*ServiceRequest servicerequest = new ServiceRequest(rs.getString("AttrName1"),
+//				rs.getDate("AttrName2"));
+//				result.add(servicerequest); */
+//			}
 			if (result.isEmpty()) {
 				logger.info("No service requests were found...");
 				throw new ServiceRequestNotFoundException();
