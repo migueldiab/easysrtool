@@ -11,6 +11,7 @@
 
 package com.sabre.hd.gui;
 
+import com.sabre.hd.easysr.Facade;
 import com.sabre.hd.easysr.forms.EcpmNewChange;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -36,16 +37,16 @@ public class Main extends javax.swing.JFrame {
   private void initComponents() {
 
     jLabel1 = new javax.swing.JLabel();
-    jButton1 = new javax.swing.JButton();
+    btnCreateMySR = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     jLabel1.setText("Welcome to the Easy SR Tool");
 
-    jButton1.setText("jButton1");
-    jButton1.addActionListener(new java.awt.event.ActionListener() {
+    btnCreateMySR.setText("Create My SR!");
+    btnCreateMySR.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton1ActionPerformed(evt);
+        btnCreateMySRActionPerformed(evt);
       }
     });
 
@@ -58,8 +59,8 @@ public class Main extends javax.swing.JFrame {
         .addComponent(jLabel1)
         .addContainerGap(250, Short.MAX_VALUE))
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addContainerGap(315, Short.MAX_VALUE)
-        .addComponent(jButton1)
+        .addContainerGap(285, Short.MAX_VALUE)
+        .addComponent(btnCreateMySR)
         .addContainerGap())
     );
     layout.setVerticalGroup(
@@ -68,23 +69,16 @@ public class Main extends javax.swing.JFrame {
         .addGap(28, 28, 28)
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
-        .addComponent(jButton1)
+        .addComponent(btnCreateMySR)
         .addContainerGap())
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      EcpmNewChange f1 = new EcpmNewChange();
-      try {
-        f1.load();
-        f1.run();
-        f1.finish();
-      } catch (Exception ex) {
-        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-      }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnCreateMySRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateMySRActionPerformed
+      Facade.createMySR();
+    }//GEN-LAST:event_btnCreateMySRActionPerformed
 
     /**
     * @param args the command line arguments
@@ -98,7 +92,7 @@ public class Main extends javax.swing.JFrame {
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton jButton1;
+  private javax.swing.JButton btnCreateMySR;
   private javax.swing.JLabel jLabel1;
   // End of variables declaration//GEN-END:variables
 
