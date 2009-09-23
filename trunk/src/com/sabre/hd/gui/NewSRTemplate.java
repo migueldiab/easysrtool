@@ -36,25 +36,12 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private void initComponents() {
 
     jLabel1 = new javax.swing.JLabel();
-    jPanel1 = new javax.swing.JPanel();
-    chkEDSAlreadyEngaged = new javax.swing.JCheckBox();
-    chkRequireOfficeOpening = new javax.swing.JCheckBox();
-    chkRequireIncreaseTransactions = new javax.swing.JCheckBox();
-    chkRequireSecurityException = new javax.swing.JCheckBox();
-    chkRequireReport = new javax.swing.JCheckBox();
-    chkRequireFirewallChange = new javax.swing.JCheckBox();
-    chkImpactHost = new javax.swing.JCheckBox();
-    chkRequireNewCircuit = new javax.swing.JCheckBox();
-    chkRequireWebHosting = new javax.swing.JCheckBox();
-    chkCRUDActiveDirectory = new javax.swing.JCheckBox();
-    chkRequireSSL = new javax.swing.JCheckBox();
-    chkRequireAccess2VAR = new javax.swing.JCheckBox();
-    chkRequireB2BVPN = new javax.swing.JCheckBox();
-    chkRequireApplicationChange = new javax.swing.JCheckBox();
-    chkInvolvePCI = new javax.swing.JCheckBox();
-    chkRequireHardware = new javax.swing.JCheckBox();
-    chkRequireStorage = new javax.swing.JCheckBox();
-    chkRequireNewSoftware = new javax.swing.JCheckBox();
+    jPanel4 = new javax.swing.JPanel();
+    btnSave = new javax.swing.JButton();
+    btnLoad = new javax.swing.JButton();
+    btnNew = new javax.swing.JButton();
+    btnClose = new javax.swing.JButton();
+    jTabbedPane1 = new javax.swing.JTabbedPane();
     jPanel2 = new javax.swing.JPanel();
     cmbBusinessUnit = new javax.swing.JComboBox();
     cmbSystem = new javax.swing.JComboBox();
@@ -91,17 +78,292 @@ public class NewSRTemplate extends javax.swing.JFrame {
     jLabel17 = new javax.swing.JLabel();
     chkRequestorLoggedUser = new javax.swing.JCheckBox();
     chkImplDateASAP = new javax.swing.JCheckBox();
-    jPanel4 = new javax.swing.JPanel();
-    btnSave = new javax.swing.JButton();
-    btnLoad = new javax.swing.JButton();
-    btnNew = new javax.swing.JButton();
-    btnClose = new javax.swing.JButton();
+    jPanel1 = new javax.swing.JPanel();
+    chkEDSAlreadyEngaged = new javax.swing.JCheckBox();
+    chkRequireOfficeOpening = new javax.swing.JCheckBox();
+    chkRequireIncreaseTransactions = new javax.swing.JCheckBox();
+    chkRequireSecurityException = new javax.swing.JCheckBox();
+    chkRequireReport = new javax.swing.JCheckBox();
+    chkRequireFirewallChange = new javax.swing.JCheckBox();
+    chkImpactHost = new javax.swing.JCheckBox();
+    chkRequireNewCircuit = new javax.swing.JCheckBox();
+    chkRequireWebHosting = new javax.swing.JCheckBox();
+    chkCRUDActiveDirectory = new javax.swing.JCheckBox();
+    chkRequireSSL = new javax.swing.JCheckBox();
+    chkRequireAccess2VAR = new javax.swing.JCheckBox();
+    chkRequireB2BVPN = new javax.swing.JCheckBox();
+    chkRequireApplicationChange = new javax.swing.JCheckBox();
+    chkInvolvePCI = new javax.swing.JCheckBox();
+    chkRequireHardware = new javax.swing.JCheckBox();
+    chkRequireStorage = new javax.swing.JCheckBox();
+    chkRequireNewSoftware = new javax.swing.JCheckBox();
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-    setFont(new java.awt.Font("Verdana", 0, 10));
+    setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+    setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
 
     jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14));
     jLabel1.setText("New SR Template");
+
+    btnSave.setText("Save");
+    btnSave.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSaveActionPerformed(evt);
+      }
+    });
+
+    btnLoad.setText("Load");
+    btnLoad.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnLoadActionPerformed(evt);
+      }
+    });
+
+    btnNew.setText("New");
+
+    btnClose.setText("Close");
+    btnClose.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnCloseActionPerformed(evt);
+      }
+    });
+
+    javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+    jPanel4.setLayout(jPanel4Layout);
+    jPanel4Layout.setHorizontalGroup(
+      jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel4Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+          .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+          .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addContainerGap())
+    );
+    jPanel4Layout.setVerticalGroup(
+      jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel4Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(btnSave)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(btnLoad)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(btnNew)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(btnClose)
+        .addContainerGap(323, Short.MAX_VALUE))
+    );
+
+    cmbBusinessUnit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Airline Solutions" }));
+
+    cmbSystem.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "eMergo" }));
+
+    txtRequestOverview.setColumns(20);
+    txtRequestOverview.setRows(5);
+    jScrollPane1.setViewportView(txtRequestOverview);
+
+    jLabel10.setText("FRCR #");
+
+    jLabel11.setText("SEDI #");
+
+    jLabel7.setText("Primavera ID");
+
+    jLabel6.setText("Business Unit");
+
+    jLabel5.setText("System");
+
+    jLabel4.setText("Request Overview");
+
+    jLabel3.setText("Request Title");
+
+    txtRequestTitle.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        txtRequestTitleActionPerformed(evt);
+      }
+    });
+
+    javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+    jPanel2.setLayout(jPanel2Layout);
+    jPanel2Layout.setHorizontalGroup(
+      jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel2Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(18, 18, 18)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        .addContainerGap())
+    );
+    jPanel2Layout.setVerticalGroup(
+      jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel2Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel3)
+          .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jLabel4))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jLabel6))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jLabel5))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jLabel7))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel10)
+          .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel11)
+          .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap(161, Short.MAX_VALUE))
+    );
+
+    jTabbedPane1.addTab("Request Info", jPanel2);
+
+    jLabel15.setText("VP/Senior Vp");
+
+    jLabel14.setText("Funding Cost Center");
+
+    jLabel16.setText("Requirements");
+
+    txtRequirements.setColumns(20);
+    txtRequirements.setRows(5);
+    jScrollPane2.setViewportView(txtRequirements);
+
+    jLabel9.setText("Sabre PR");
+
+    jLabel12.setText("Owning Cost Center");
+
+    jLabel13.setText("Requestor");
+
+    jLabel8.setText("Sabre AR");
+
+    jLabel17.setText("Impl. Date");
+
+    chkRequestorLoggedUser.setText("Logged User");
+    chkRequestorLoggedUser.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        chkRequestorLoggedUserActionPerformed(evt);
+      }
+    });
+
+    chkImplDateASAP.setText("ASAP");
+    chkImplDateASAP.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        chkImplDateASAPActionPerformed(evt);
+      }
+    });
+
+    javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+    jPanel3.setLayout(jPanel3Layout);
+    jPanel3Layout.setHorizontalGroup(
+      jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel3Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(txtRequestor, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtFundingCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtOwningCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(chkRequestorLoggedUser)))
+          .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(txtSabreAR, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtSabrePR, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+          .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(txtVP, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+          .addGroup(jPanel3Layout.createSequentialGroup()
+            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(chkImplDateASAP)
+              .addComponent(txtImplDate, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        .addContainerGap(15, Short.MAX_VALUE))
+    );
+    jPanel3Layout.setVerticalGroup(
+      jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel3Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel8)
+          .addComponent(txtSabreAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel9)
+          .addComponent(txtSabrePR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(3, 3, 3)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel12)
+          .addComponent(txtOwningCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel14)
+          .addComponent(txtFundingCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel13)
+          .addComponent(txtRequestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(3, 3, 3)
+        .addComponent(chkRequestorLoggedUser)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel15)
+          .addComponent(txtVP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel17)
+          .addComponent(txtImplDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkImplDateASAP)
+        .addContainerGap(95, Short.MAX_VALUE))
+    );
+
+    jTabbedPane1.addTab("CostCenter Info", jPanel3);
 
     chkEDSAlreadyEngaged.setText("EDS Already Engaged");
 
@@ -161,340 +423,82 @@ public class NewSRTemplate extends javax.swing.JFrame {
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(chkRequireNewSoftware)
-              .addComponent(chkRequireHardware)
-              .addComponent(chkRequireApplicationChange)
-              .addComponent(chkRequireStorage)
-              .addComponent(chkRequireFirewallChange)
-              .addComponent(chkRequireSecurityException))
-            .addGap(62, 62, 62)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(chkRequireB2BVPN)
-              .addComponent(chkRequireSSL)
-              .addComponent(chkRequireAccess2VAR)
-              .addComponent(chkInvolvePCI)
-              .addComponent(chkRequireIncreaseTransactions)
-              .addComponent(chkRequireWebHosting)))
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-            .addGap(453, 453, 453)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(chkRequireNewCircuit)
-              .addComponent(chkImpactHost)
-              .addComponent(chkCRUDActiveDirectory)
-              .addComponent(chkRequireReport)
-              .addComponent(chkRequireOfficeOpening)
-              .addComponent(chkEDSAlreadyEngaged))))
-        .addContainerGap(49, Short.MAX_VALUE))
+          .addComponent(chkRequireNewSoftware)
+          .addComponent(chkRequireHardware)
+          .addComponent(chkRequireApplicationChange)
+          .addComponent(chkRequireStorage)
+          .addComponent(chkRequireFirewallChange)
+          .addComponent(chkRequireSecurityException)
+          .addComponent(chkRequireB2BVPN)
+          .addComponent(chkRequireSSL)
+          .addComponent(chkRequireAccess2VAR)
+          .addComponent(chkInvolvePCI)
+          .addComponent(chkRequireIncreaseTransactions)
+          .addComponent(chkRequireWebHosting)
+          .addComponent(chkRequireNewCircuit)
+          .addComponent(chkImpactHost)
+          .addComponent(chkCRUDActiveDirectory)
+          .addComponent(chkRequireReport)
+          .addComponent(chkRequireOfficeOpening)
+          .addComponent(chkEDSAlreadyEngaged))
+        .addContainerGap(190, Short.MAX_VALUE))
     );
     jPanel1Layout.setVerticalGroup(
       jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel1Layout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-              .addComponent(chkRequireHardware)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireNewSoftware)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireStorage)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireApplicationChange)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireSecurityException)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireFirewallChange))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-              .addComponent(chkRequireIncreaseTransactions)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkInvolvePCI)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireSSL)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireB2BVPN)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireAccess2VAR)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(chkRequireWebHosting)))
-          .addGroup(jPanel1Layout.createSequentialGroup()
-            .addComponent(chkImpactHost)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(chkRequireNewCircuit)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(chkRequireReport)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(chkCRUDActiveDirectory)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(chkRequireOfficeOpening)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(chkEDSAlreadyEngaged)))
-        .addContainerGap(23, Short.MAX_VALUE))
+        .addComponent(chkRequireHardware)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireNewSoftware)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireStorage)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireApplicationChange)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireSecurityException)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireFirewallChange)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireIncreaseTransactions)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkInvolvePCI)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireSSL)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireB2BVPN)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireAccess2VAR)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireWebHosting)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkImpactHost)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireNewCircuit)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireReport)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkCRUDActiveDirectory)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkRequireOfficeOpening)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(chkEDSAlreadyEngaged)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
-    cmbBusinessUnit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Airline Solutions" }));
-
-    cmbSystem.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "eMergo" }));
-
-    txtRequestOverview.setColumns(20);
-    txtRequestOverview.setRows(5);
-    jScrollPane1.setViewportView(txtRequestOverview);
-
-    jLabel10.setText("FRCR #");
-
-    jLabel11.setText("SEDI #");
-
-    jLabel7.setText("Primavera ID");
-
-    jLabel6.setText("Business Unit");
-
-    jLabel5.setText("System");
-
-    jLabel4.setText("Request Overview");
-
-    jLabel3.setText("Request Title");
-
-    txtRequestTitle.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtRequestTitleActionPerformed(evt);
-      }
-    });
-
-    javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-    jPanel2.setLayout(jPanel2Layout);
-    jPanel2Layout.setHorizontalGroup(
-      jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(jPanel2Layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addGroup(jPanel2Layout.createSequentialGroup()
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, 18)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        .addContainerGap())
-    );
-    jPanel2Layout.setVerticalGroup(
-      jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(jPanel2Layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel3)
-          .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel4))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel6))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel5))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel7))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel10)
-          .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel11)
-          .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(69, Short.MAX_VALUE))
-    );
-
-    jLabel15.setText("VP/Senior Vp");
-
-    jLabel14.setText("Funding Cost Center");
-
-    jLabel16.setText("Requirements");
-
-    txtRequirements.setColumns(20);
-    txtRequirements.setRows(5);
-    jScrollPane2.setViewportView(txtRequirements);
-
-    jLabel9.setText("Sabre PR");
-
-    jLabel12.setText("Owning Cost Center");
-
-    jLabel13.setText("Requestor");
-
-    jLabel8.setText("Sabre AR");
-
-    jLabel17.setText("Impl. Date");
-
-    chkRequestorLoggedUser.setText("Logged User");
-    chkRequestorLoggedUser.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        chkRequestorLoggedUserActionPerformed(evt);
-      }
-    });
-
-    chkImplDateASAP.setText("ASAP");
-    chkImplDateASAP.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        chkImplDateASAPActionPerformed(evt);
-      }
-    });
-
-    javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-    jPanel3.setLayout(jPanel3Layout);
-    jPanel3Layout.setHorizontalGroup(
-      jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(jPanel3Layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtImplDate, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtVP, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtRequestor, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtFundingCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtOwningCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
-          .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtSabreAR, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtSabrePR, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(chkImplDateASAP)
-          .addComponent(chkRequestorLoggedUser))
-        .addContainerGap())
-    );
-    jPanel3Layout.setVerticalGroup(
-      jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(jPanel3Layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel8)
-          .addComponent(txtSabreAR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel9)
-          .addComponent(txtSabrePR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(3, 3, 3)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel12)
-          .addComponent(txtOwningCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel14)
-          .addComponent(txtFundingCostCenter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel13)
-          .addComponent(txtRequestor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(chkRequestorLoggedUser))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel15)
-          .addComponent(txtVP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel17)
-          .addComponent(chkImplDateASAP)
-          .addComponent(txtImplDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(48, Short.MAX_VALUE))
-    );
-
-    btnSave.setText("Save");
-    btnSave.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnSaveActionPerformed(evt);
-      }
-    });
-
-    btnLoad.setText("Load");
-
-    btnNew.setText("New");
-
-    btnClose.setText("Close");
-
-    javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-    jPanel4.setLayout(jPanel4Layout);
-    jPanel4Layout.setHorizontalGroup(
-      jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(jPanel4Layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-          .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-          .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
-        .addContainerGap())
-    );
-    jPanel4Layout.setVerticalGroup(
-      jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(jPanel4Layout.createSequentialGroup()
-        .addContainerGap()
-        .addComponent(btnSave)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(btnLoad)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(btnNew)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(btnClose)
-        .addContainerGap(47, Short.MAX_VALUE))
-    );
+    jTabbedPane1.addTab("Business Info", jPanel1);
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
           .addGroup(layout.createSequentialGroup()
-            .addGap(133, 133, 133)
-            .addComponent(jLabel1))
-          .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-              .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         .addContainerGap())
     );
     layout.setVerticalGroup(
@@ -503,14 +507,10 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addContainerGap()
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addGap(17, 17, 17))
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap(16, Short.MAX_VALUE))
     );
 
     pack();
@@ -553,6 +553,20 @@ public class NewSRTemplate extends javax.swing.JFrame {
           JOptionPane.ERROR_MESSAGE);
       }
     }//GEN-LAST:event_btnSaveActionPerformed
+
+    private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
+      this.dispose();
+      this.setVisible(false);
+    }//GEN-LAST:event_btnCloseActionPerformed
+
+    private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
+      if (!loadSRTemplate()) {
+        JOptionPane.showMessageDialog(this,
+          "Your SR Template could not be loaded!",
+          "Error",
+          JOptionPane.ERROR_MESSAGE);
+      }
+    }//GEN-LAST:event_btnLoadActionPerformed
 
     /**
     * @param args the command line arguments
@@ -614,6 +628,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JPanel jPanel4;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JScrollPane jScrollPane2;
+  private javax.swing.JTabbedPane jTabbedPane1;
   private javax.swing.JTextField txtFRCRId;
   private javax.swing.JTextField txtFundingCostCenter;
   private javax.swing.JTextField txtImplDate;
@@ -633,7 +648,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     if (!checkSRFields()) {
       return false;
     }
-    ServiceRequest aServiceRequest = new ServiceRequest();
+    ServiceRequest aServiceRequest = fillSRObject();
     if (!Facade.saveSR(aServiceRequest)) {
       return false;
     }
@@ -641,6 +656,130 @@ public class NewSRTemplate extends javax.swing.JFrame {
   }
 
   private boolean checkSRFields() {
+    return true;
+  }
+
+  private ServiceRequest fillSRObject() {
+    ServiceRequest aServiceRequest = new ServiceRequest();
+    aServiceRequest.setRequestTitle(this.txtRequestTitle.getText());
+    aServiceRequest.setRequestOverview(this.txtRequestOverview.getText());
+    aServiceRequest.setBusinessUnit(this.cmbBusinessUnit.getSelectedItem().toString());
+    aServiceRequest.setSystem(this.cmbSystem.getSelectedItem().toString());
+    aServiceRequest.setPrimaveraId(this.txtPrimaveraId.getText());
+    aServiceRequest.setFRCR(this.txtFRCRId.getText());
+    aServiceRequest.setSEDI(this.txtSEDIId.getText());
+    aServiceRequest.setSabreAR(this.txtSabreAR.getText());
+    aServiceRequest.setSabrePR(this.txtSabrePR.getText());
+    aServiceRequest.setOwningCostCenter(this.txtOwningCostCenter.getText());
+    aServiceRequest.setFundingCostCenter(this.txtFundingCostCenter.getText());
+    aServiceRequest.setRequestor(this.txtRequestor.getText());
+    aServiceRequest.setVP(this.txtVP.getText());
+    aServiceRequest.setRequirements(this.txtRequirements.getText());
+    aServiceRequest.setImplDate(this.txtImplDate.getText());
+    aServiceRequest.setCRUDActiveDirectory(this.chkCRUDActiveDirectory.isSelected());
+    aServiceRequest.setEDSAlreadyEngaged(this.chkEDSAlreadyEngaged.isSelected());
+    aServiceRequest.setImpactHost(this.chkImpactHost.isSelected());
+    aServiceRequest.setImplDateASAP(this.chkImplDateASAP.isSelected());
+    aServiceRequest.setInvolvePCI(this.chkInvolvePCI.isSelected());
+    aServiceRequest.setRequestorLoggedUser(this.chkRequestorLoggedUser.isSelected());
+    aServiceRequest.setRequireAccess2VAR(this.chkRequireAccess2VAR.isSelected());
+    aServiceRequest.setRequireApplicationChange(this.chkRequireApplicationChange.isSelected());
+    aServiceRequest.setRequireB2BVPN(this.chkRequireB2BVPN.isSelected());
+    aServiceRequest.setRequireFirewallChange(this.chkRequireFirewallChange.isSelected());
+    aServiceRequest.setRequireHardware(this.chkRequireHardware.isSelected());
+    aServiceRequest.setRequireIncreaseTransactions(this.chkRequireIncreaseTransactions.isSelected());
+    aServiceRequest.setRequireNewCircuit(this.chkRequireNewCircuit.isSelected());
+    aServiceRequest.setRequireNewSoftware(this.chkRequireNewSoftware.isSelected());
+    aServiceRequest.setRequireOfficeOpening(this.chkRequireOfficeOpening.isSelected());
+    aServiceRequest.setRequireReport(this.chkRequireReport.isSelected());
+    aServiceRequest.setRequireSSL(this.chkRequireSSL.isSelected());
+    aServiceRequest.setRequireSecurityException(this.chkRequireSecurityException.isSelected());
+    aServiceRequest.setRequireStorage(this.chkRequireStorage.isSelected());
+    aServiceRequest.setRequireWebHosting(this.chkRequireWebHosting.isSelected());
+    return aServiceRequest;
+  }
+
+  private boolean loadSRTemplate() {
+    ServiceRequest aServiceRequest = cargaUnSr();    
+    return fillSRFields(aServiceRequest);
+  }
+
+  private ServiceRequest cargaUnSr() {
+	  ServiceRequest aServiceRequest = new ServiceRequest();
+    aServiceRequest.setRequestTitle("txtRequestTitle");
+    aServiceRequest.setRequestOverview("txtRequestOverview");
+    aServiceRequest.setBusinessUnit("cmbBusinessUnit");
+    aServiceRequest.setSystem("cmbSystem");
+    aServiceRequest.setPrimaveraId("txtPrimaveraId");
+    aServiceRequest.setFRCR("txtFRCRId");
+    aServiceRequest.setSEDI("txtSEDIId");
+    aServiceRequest.setSabreAR("txtSabreAR");
+    aServiceRequest.setSabrePR("txtSabrePR");
+    aServiceRequest.setOwningCostCenter("txtOwningCostCenter");
+    aServiceRequest.setFundingCostCenter("txtFundingCostCenter");
+    aServiceRequest.setRequestor("txtRequestor");
+    aServiceRequest.setVP("txtVP");
+    aServiceRequest.setRequirements("txtRequirements");
+    aServiceRequest.setImplDate("txtImplDate");
+    aServiceRequest.setCRUDActiveDirectory(true);
+    aServiceRequest.setEDSAlreadyEngaged(true);
+    aServiceRequest.setImpactHost(true);
+    aServiceRequest.setImplDateASAP(true);
+    aServiceRequest.setInvolvePCI(true);
+    aServiceRequest.setRequestorLoggedUser(true);
+    aServiceRequest.setRequireAccess2VAR(true);
+    aServiceRequest.setRequireApplicationChange(true);
+    aServiceRequest.setRequireB2BVPN(true);
+    aServiceRequest.setRequireFirewallChange(true);
+    aServiceRequest.setRequireHardware(true);
+    aServiceRequest.setRequireIncreaseTransactions(true);
+    aServiceRequest.setRequireNewCircuit(true);
+    aServiceRequest.setRequireNewSoftware(true);
+    aServiceRequest.setRequireOfficeOpening(true);
+    aServiceRequest.setRequireReport(true);
+    aServiceRequest.setRequireSSL(true);
+    aServiceRequest.setRequireSecurityException(true);
+    aServiceRequest.setRequireStorage(true);
+    aServiceRequest.setRequireWebHosting(true);
+    return aServiceRequest;
+  }
+
+  private boolean fillSRFields(ServiceRequest aServiceRequest) {
+    this.txtRequestTitle.setText(aServiceRequest.getRequestTitle());
+    this.txtRequestOverview.setText(aServiceRequest.getRequestOverview());
+    this.cmbBusinessUnit.setSelectedItem(aServiceRequest.getBusinessUnit());
+    this.cmbSystem.setSelectedItem(aServiceRequest.getSystem());
+    this.txtPrimaveraId.setText(aServiceRequest.getPrimaveraId());
+    this.txtFRCRId.setText(aServiceRequest.getFRCR());
+    this.txtSEDIId.setText(aServiceRequest.getSEDI());
+    this.txtSabreAR.setText(aServiceRequest.getSabreAR());
+    this.txtSabrePR.setText(aServiceRequest.getSabrePR());
+    this.txtOwningCostCenter.setText(aServiceRequest.getOwningCostCenter());
+    this.txtFundingCostCenter.setText(aServiceRequest.getFundingCostCenter());
+    this.txtRequestor.setText(aServiceRequest.getRequestor());
+    this.txtVP.setText(aServiceRequest.getVP());
+    this.txtRequirements.setText(aServiceRequest.getRequirements());
+    this.txtImplDate.setText(aServiceRequest.getImplDate());
+    this.chkCRUDActiveDirectory.setSelected(aServiceRequest.isCRUDActiveDirectory());
+    this.chkEDSAlreadyEngaged.setSelected(aServiceRequest.isEDSAlreadyEngaged());
+    this.chkImpactHost.setSelected(aServiceRequest.isImpactHost());
+    this.chkImplDateASAP.setSelected(aServiceRequest.isImplDateASAP());
+    this.chkInvolvePCI.setSelected(aServiceRequest.isInvolvePCI());
+    this.chkRequestorLoggedUser.setSelected(aServiceRequest.isRequestorLoggedUser());
+    this.chkRequireAccess2VAR.setSelected(aServiceRequest.isRequireAccess2VAR());
+    this.chkRequireApplicationChange.setSelected(aServiceRequest.isRequireApplicationChange());
+    this.chkRequireB2BVPN.setSelected(aServiceRequest.isRequireB2BVPN());
+    this.chkRequireFirewallChange.setSelected(aServiceRequest.isRequireFirewallChange());
+    this.chkRequireHardware.setSelected(aServiceRequest.isRequireHardware());
+    this.chkRequireIncreaseTransactions.setSelected(aServiceRequest.isRequireIncreaseTransactions());
+    this.chkRequireNewCircuit.setSelected(aServiceRequest.isRequireNewCircuit());
+    this.chkRequireNewSoftware.setSelected(aServiceRequest.isRequireNewSoftware());
+    this.chkRequireOfficeOpening.setSelected(aServiceRequest.isRequireOfficeOpening());
+    this.chkRequireReport.setSelected(aServiceRequest.isRequireReport());
+    this.chkRequireSSL.setSelected(aServiceRequest.isRequireSSL());
+    this.chkRequireSecurityException.setSelected(aServiceRequest.isRequireSecurityException());
+    this.chkRequireStorage.setSelected(aServiceRequest.isRequireStorage());
+    this.chkRequireWebHosting.setSelected(aServiceRequest.isRequireWebHosting());
     return true;
   }
 
