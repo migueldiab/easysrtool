@@ -5,10 +5,16 @@
 
 package com.sabre.hd.easysr;
 
+import com.sabre.hd.easysr.formLogic.SRLogic;
+
 /**
  *
  * @author SG0894180
  */
 public class Facade {
+
+  public static void createMySR() {
+    SRLogic.createMySR();
+  }
 
 }
