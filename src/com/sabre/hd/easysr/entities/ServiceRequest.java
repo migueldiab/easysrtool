@@ -50,15 +50,49 @@ public class ServiceRequest extends PersistentObject{
   private boolean requireWebHosting;
 
 
-
   public static boolean save() {
     throw new UnsupportedOperationException("Not yet implemented");
   }
 
   
-	public ServiceRequest()
+	public ServiceRequest (String requestTitle,   String requestOverview,   String businessUnit,   String system,   String primaveraId,   String FRCR,   String SEDI,   String sabreAR,   String sabrePR,   String owningCostCenter,   String fundingCostCenter,   String requestor,   String VP,   String requirements,   Date   implDate,   boolean CRUDActiveDirectory,   boolean EDSAlreadyEngaged,   boolean impactHost,   boolean implDateASAP,   boolean involvePCI,   boolean requestorLoggedUser,   boolean requireAccess2VAR,   boolean requireApplicationChange,   boolean requireB2BVPN,   boolean requireFirewallChange,   boolean requireHardware,   boolean requireIncreaseTransactions,   boolean requireNewCircuit,   boolean requireNewSoftware,   boolean requireOfficeOpening,   boolean requireReport,   boolean requireSSL,   boolean requireSecurityException,   boolean requireStorage,   boolean requireWebHosting)
 	{
-	}
+        this.setRequestTitle(requestTitle);
+        this.setRequestOverview(requestOverview);
+        this.setBusinessUnit(businessUnit);
+        this.setSystem(system);
+        this.setPrimaveraId(primaveraId);
+        this.setFRCR(FRCR);
+        this.setSEDI(SEDI);
+        this.setSabreAR(sabreAR);
+        this.setSabrePR(sabrePR);
+        this.setOwningCostCenter(owningCostCenter);
+        this.setFundingCostCenter(fundingCostCenter);
+        this.setRequestor(requestor);
+        this.setVP(VP);
+        this.setRequirements(requirements);
+        this.setImplDate(implDate);
+        this.setCRUDActiveDirectory(CRUDActiveDirectory);
+        this.setEDSAlreadyEngaged(EDSAlreadyEngaged);
+        this.setImpactHost(impactHost);
+        this.setImplDateASAP(implDateASAP);
+        this.setInvolvePCI(involvePCI);
+        this.setRequestorLoggedUser(requestorLoggedUser);
+        this.setRequireAccess2VAR(requireAccess2VAR);
+        this.setRequireApplicationChange(requireApplicationChange);
+        this.setRequireB2BVPN(requireB2BVPN);
+        this.setRequireFirewallChange(requireFirewallChange);
+        this.setRequireHardware(requireHardware);
+        this.setRequireIncreaseTransactions(requireIncreaseTransactions);
+        this.setRequireNewCircuit(requireNewCircuit);
+        this.setRequireNewSoftware(requireNewSoftware);
+        this.setRequireOfficeOpening(requireOfficeOpening);
+        this.setRequireReport(requireReport);
+        this.setRequireSSL(requireSSL);
+        this.setRequireSecurityException(requireSecurityException);
+        this.setRequireStorage(requireStorage);
+        this.setRequireWebHosting(requireWebHosting);
+        }
 
   public static void launchSRCreation() {
 //    EcpmNewChange f1 = new EcpmNewChange();
