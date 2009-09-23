@@ -5,24 +5,71 @@ import org.apache.log4j.Logger;
 import com.sabre.hd.easysr.persistence.dao.ServiceRequestDAO;
 import com.sabre.hd.easysr.persitence.DAOFactory;
 import com.sabre.hd.easysr.persitence.PersistentObject;
+import java.sql.Date;
 
 
 public class ServiceRequest extends PersistentObject{
 	
 	private static Logger logger = Logger.getLogger(ServiceRequest.class.getName());
 	private ServiceRequestDAO dao;
-	
-	// TODO: incluir propiedades del Service Request aqui.
-	
-	// TODO: Incluir constructor pasandole propiedades
-	//public ServiceRequest(attr1,attr2)
-	//{	
-	//}
-	
-	
+
+  private String requestTitle;
+  private String requestOverview;
+  private String businessUnit;
+  private String system;
+  private String primaveraId;
+  private String FRCR;
+  private String SEDI;
+  private String sabreAR;
+  private String sabrePR;
+  private String owningCostCenter;
+  private String fundingCostCenter;
+  private String requestor;
+  private String VP;
+  private String requirements;
+  private Date   implDate;
+  private boolean CRUDActiveDirectory;
+  private boolean EDSAlreadyEngaged;
+  private boolean impactHost;
+  private boolean implDateASAP;
+  private boolean involvePCI;
+  private boolean requestorLoggedUser;
+  private boolean requireAccess2VAR;
+  private boolean requireApplicationChange;
+  private boolean requireB2BVPN;
+  private boolean requireFirewallChange;
+  private boolean requireHardware;
+  private boolean requireIncreaseTransactions;
+  private boolean requireNewCircuit;
+  private boolean requireNewSoftware;
+  private boolean requireOfficeOpening;
+  private boolean requireReport;
+  private boolean requireSSL;
+  private boolean requireSecurityException;
+  private boolean requireStorage;
+  private boolean requireWebHosting;
+
+
+
+  public static boolean save() {
+    throw new UnsupportedOperationException("Not yet implemented");
+  }
+
+  
 	public ServiceRequest()
 	{
 	}
+
+  public static void launchSRCreation() {
+//    EcpmNewChange f1 = new EcpmNewChange();
+//      try {
+//        f1.load();
+//        f1.run();
+//        f1.finish();
+//      } catch (Exception ex) {
+//        Logger.getLogger(EasySRMain.class.getName()).log(Level.ERROR, null, ex);
+//      }
+  }
 	
 	public ServiceRequestDAO getDao() {
 		if(this.dao == null){
@@ -55,5 +102,495 @@ public class ServiceRequest extends PersistentObject{
 	public void update() {
 		// TODO Auto-generated method stub
 		
-	} 			
+	}
+
+  /**
+   * @return the requestTitle
+   */
+  public String getRequestTitle() {
+    return requestTitle;
+  }
+
+  /**
+   * @param requestTitle the requestTitle to set
+   */
+  public void setRequestTitle(String requestTitle) {
+    this.requestTitle = requestTitle;
+  }
+
+  /**
+   * @return the requestOverview
+   */
+  public String getRequestOverview() {
+    return requestOverview;
+  }
+
+  /**
+   * @param requestOverview the requestOverview to set
+   */
+  public void setRequestOverview(String requestOverview) {
+    this.requestOverview = requestOverview;
+  }
+
+  /**
+   * @return the businessUnit
+   */
+  public String getBusinessUnit() {
+    return businessUnit;
+  }
+
+  /**
+   * @param businessUnit the businessUnit to set
+   */
+  public void setBusinessUnit(String businessUnit) {
+    this.businessUnit = businessUnit;
+  }
+
+  /**
+   * @return the system
+   */
+  public String getSystem() {
+    return system;
+  }
+
+  /**
+   * @param system the system to set
+   */
+  public void setSystem(String system) {
+    this.system = system;
+  }
+
+  /**
+   * @return the primaveraId
+   */
+  public String getPrimaveraId() {
+    return primaveraId;
+  }
+
+  /**
+   * @param primaveraId the primaveraId to set
+   */
+  public void setPrimaveraId(String primaveraId) {
+    this.primaveraId = primaveraId;
+  }
+
+  /**
+   * @return the FRCR
+   */
+  public String getFRCR() {
+    return FRCR;
+  }
+
+  /**
+   * @param FRCR the FRCR to set
+   */
+  public void setFRCR(String FRCR) {
+    this.FRCR = FRCR;
+  }
+
+  /**
+   * @return the SEDI
+   */
+  public String getSEDI() {
+    return SEDI;
+  }
+
+  /**
+   * @param SEDI the SEDI to set
+   */
+  public void setSEDI(String SEDI) {
+    this.SEDI = SEDI;
+  }
+
+  /**
+   * @return the sabreAR
+   */
+  public String getSabreAR() {
+    return sabreAR;
+  }
+
+  /**
+   * @param sabreAR the sabreAR to set
+   */
+  public void setSabreAR(String sabreAR) {
+    this.sabreAR = sabreAR;
+  }
+
+  /**
+   * @return the sabrePR
+   */
+  public String getSabrePR() {
+    return sabrePR;
+  }
+
+  /**
+   * @param sabrePR the sabrePR to set
+   */
+  public void setSabrePR(String sabrePR) {
+    this.sabrePR = sabrePR;
+  }
+
+  /**
+   * @return the owningCostCenter
+   */
+  public String getOwningCostCenter() {
+    return owningCostCenter;
+  }
+
+  /**
+   * @param owningCostCenter the owningCostCenter to set
+   */
+  public void setOwningCostCenter(String owningCostCenter) {
+    this.owningCostCenter = owningCostCenter;
+  }
+
+  /**
+   * @return the fundingCostCenter
+   */
+  public String getFundingCostCenter() {
+    return fundingCostCenter;
+  }
+
+  /**
+   * @param fundingCostCenter the fundingCostCenter to set
+   */
+  public void setFundingCostCenter(String fundingCostCenter) {
+    this.fundingCostCenter = fundingCostCenter;
+  }
+
+  /**
+   * @return the requestor
+   */
+  public String getRequestor() {
+    return requestor;
+  }
+
+  /**
+   * @param requestor the requestor to set
+   */
+  public void setRequestor(String requestor) {
+    this.requestor = requestor;
+  }
+
+  /**
+   * @return the VP
+   */
+  public String getVP() {
+    return VP;
+  }
+
+  /**
+   * @param VP the VP to set
+   */
+  public void setVP(String VP) {
+    this.VP = VP;
+  }
+
+  /**
+   * @return the requirements
+   */
+  public String getRequirements() {
+    return requirements;
+  }
+
+  /**
+   * @param requirements the requirements to set
+   */
+  public void setRequirements(String requirements) {
+    this.requirements = requirements;
+  }
+
+  /**
+   * @return the implDate
+   */
+  public Date getImplDate() {
+    return implDate;
+  }
+
+  /**
+   * @param implDate the implDate to set
+   */
+  public void setImplDate(Date implDate) {
+    this.implDate = implDate;
+  }
+
+  /**
+   * @return the CRUDActiveDirectory
+   */
+  public boolean isCRUDActiveDirectory() {
+    return CRUDActiveDirectory;
+  }
+
+  /**
+   * @param CRUDActiveDirectory the CRUDActiveDirectory to set
+   */
+  public void setCRUDActiveDirectory(boolean CRUDActiveDirectory) {
+    this.CRUDActiveDirectory = CRUDActiveDirectory;
+  }
+
+  /**
+   * @return the EDSAlreadyEngaged
+   */
+  public boolean isEDSAlreadyEngaged() {
+    return EDSAlreadyEngaged;
+  }
+
+  /**
+   * @param EDSAlreadyEngaged the EDSAlreadyEngaged to set
+   */
+  public void setEDSAlreadyEngaged(boolean EDSAlreadyEngaged) {
+    this.EDSAlreadyEngaged = EDSAlreadyEngaged;
+  }
+
+  /**
+   * @return the impactHost
+   */
+  public boolean isImpactHost() {
+    return impactHost;
+  }
+
+  /**
+   * @param impactHost the impactHost to set
+   */
+  public void setImpactHost(boolean impactHost) {
+    this.impactHost = impactHost;
+  }
+
+  /**
+   * @return the implDateASAP
+   */
+  public boolean isImplDateASAP() {
+    return implDateASAP;
+  }
+
+  /**
+   * @param implDateASAP the implDateASAP to set
+   */
+  public void setImplDateASAP(boolean implDateASAP) {
+    this.implDateASAP = implDateASAP;
+  }
+
+  /**
+   * @return the involvePCI
+   */
+  public boolean isInvolvePCI() {
+    return involvePCI;
+  }
+
+  /**
+   * @param involvePCI the involvePCI to set
+   */
+  public void setInvolvePCI(boolean involvePCI) {
+    this.involvePCI = involvePCI;
+  }
+
+  /**
+   * @return the requestorLoggedUser
+   */
+  public boolean isRequestorLoggedUser() {
+    return requestorLoggedUser;
+  }
+
+  /**
+   * @param requestorLoggedUser the requestorLoggedUser to set
+   */
+  public void setRequestorLoggedUser(boolean requestorLoggedUser) {
+    this.requestorLoggedUser = requestorLoggedUser;
+  }
+
+  /**
+   * @return the requireAccess2VAR
+   */
+  public boolean isRequireAccess2VAR() {
+    return requireAccess2VAR;
+  }
+
+  /**
+   * @param requireAccess2VAR the requireAccess2VAR to set
+   */
+  public void setRequireAccess2VAR(boolean requireAccess2VAR) {
+    this.requireAccess2VAR = requireAccess2VAR;
+  }
+
+  /**
+   * @return the requireApplicationChange
+   */
+  public boolean isRequireApplicationChange() {
+    return requireApplicationChange;
+  }
+
+  /**
+   * @param requireApplicationChange the requireApplicationChange to set
+   */
+  public void setRequireApplicationChange(boolean requireApplicationChange) {
+    this.requireApplicationChange = requireApplicationChange;
+  }
+
+  /**
+   * @return the requireB2BVPN
+   */
+  public boolean isRequireB2BVPN() {
+    return requireB2BVPN;
+  }
+
+  /**
+   * @param requireB2BVPN the requireB2BVPN to set
+   */
+  public void setRequireB2BVPN(boolean requireB2BVPN) {
+    this.requireB2BVPN = requireB2BVPN;
+  }
+
+  /**
+   * @return the requireFirewallChange
+   */
+  public boolean isRequireFirewallChange() {
+    return requireFirewallChange;
+  }
+
+  /**
+   * @param requireFirewallChange the requireFirewallChange to set
+   */
+  public void setRequireFirewallChange(boolean requireFirewallChange) {
+    this.requireFirewallChange = requireFirewallChange;
+  }
+
+  /**
+   * @return the requireHardware
+   */
+  public boolean isRequireHardware() {
+    return requireHardware;
+  }
+
+  /**
+   * @param requireHardware the requireHardware to set
+   */
+  public void setRequireHardware(boolean requireHardware) {
+    this.requireHardware = requireHardware;
+  }
+
+  /**
+   * @return the requireIncreaseTransactions
+   */
+  public boolean isRequireIncreaseTransactions() {
+    return requireIncreaseTransactions;
+  }
+
+  /**
+   * @param requireIncreaseTransactions the requireIncreaseTransactions to set
+   */
+  public void setRequireIncreaseTransactions(boolean requireIncreaseTransactions) {
+    this.requireIncreaseTransactions = requireIncreaseTransactions;
+  }
+
+  /**
+   * @return the requireNewCircuit
+   */
+  public boolean isRequireNewCircuit() {
+    return requireNewCircuit;
+  }
+
+  /**
+   * @param requireNewCircuit the requireNewCircuit to set
+   */
+  public void setRequireNewCircuit(boolean requireNewCircuit) {
+    this.requireNewCircuit = requireNewCircuit;
+  }
+
+  /**
+   * @return the requireNewSoftware
+   */
+  public boolean isRequireNewSoftware() {
+    return requireNewSoftware;
+  }
+
+  /**
+   * @param requireNewSoftware the requireNewSoftware to set
+   */
+  public void setRequireNewSoftware(boolean requireNewSoftware) {
+    this.requireNewSoftware = requireNewSoftware;
+  }
+
+  /**
+   * @return the requireOfficeOpening
+   */
+  public boolean isRequireOfficeOpening() {
+    return requireOfficeOpening;
+  }
+
+  /**
+   * @param requireOfficeOpening the requireOfficeOpening to set
+   */
+  public void setRequireOfficeOpening(boolean requireOfficeOpening) {
+    this.requireOfficeOpening = requireOfficeOpening;
+  }
+
+  /**
+   * @return the requireReport
+   */
+  public boolean isRequireReport() {
+    return requireReport;
+  }
+
+  /**
+   * @param requireReport the requireReport to set
+   */
+  public void setRequireReport(boolean requireReport) {
+    this.requireReport = requireReport;
+  }
+
+  /**
+   * @return the requireSSL
+   */
+  public boolean isRequireSSL() {
+    return requireSSL;
+  }
+
+  /**
+   * @param requireSSL the requireSSL to set
+   */
+  public void setRequireSSL(boolean requireSSL) {
+    this.requireSSL = requireSSL;
+  }
+
+  /**
+   * @return the requireSecurityException
+   */
+  public boolean isRequireSecurityException() {
+    return requireSecurityException;
+  }
+
+  /**
+   * @param requireSecurityException the requireSecurityException to set
+   */
+  public void setRequireSecurityException(boolean requireSecurityException) {
+    this.requireSecurityException = requireSecurityException;
+  }
+
+  /**
+   * @return the requireStorage
+   */
+  public boolean isRequireStorage() {
+    return requireStorage;
+  }
+
+  /**
+   * @param requireStorage the requireStorage to set
+   */
+  public void setRequireStorage(boolean requireStorage) {
+    this.requireStorage = requireStorage;
+  }
+
+  /**
+   * @return the requireWebHosting
+   */
+  public boolean isRequireWebHosting() {
+    return requireWebHosting;
+  }
+
+  /**
+   * @param requireWebHosting the requireWebHosting to set
+   */
+  public void setRequireWebHosting(boolean requireWebHosting) {
+    this.requireWebHosting = requireWebHosting;
+  }
 }
