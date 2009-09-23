@@ -19,7 +19,8 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 
 	private static Logger logger = Logger.getLogger(ServiceRequestDAOImpl.class
 			.getName());
-	private static final String TABLE_NAME = "servicerequests";
+	private static final String TABLE_NAME = "forms_template";
+
 
 	@Override
 	public void deleteServiceRequest(String id) throws ServiceRequestNotFoundException {
@@ -59,8 +60,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 	}
 
 	@Override
-	public ServiceRequest findServiceRequestByPK(String pk)
-			throws ServiceRequestNotFoundException {
+	public ServiceRequest findServiceRequestByPK(String pk) throws ServiceRequestNotFoundException {
 		if (pk == null || pk.trim().equals("")) {
 			logger.error("ServiceRequest PK is required!");
 			throw new DAORuntimeException("ServiceRequest PK is required!");
@@ -77,7 +77,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 
 			sbSelect.append("SELECT * FROM ");
 			sbSelect.append(ServiceRequestDAOImpl.TABLE_NAME);
-			sbSelect.append(" WHERE servicerequest_id = ?");
+			sbSelect.append(" WHERE form_id = ?");
 
 			stmtSelect = conn.prepareStatement(sbSelect.toString());
 
@@ -86,12 +86,14 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 			rs = stmtSelect.executeQuery();
 			if (rs.next()) {
 				
-				//TODO: Remplazar con constructor adecuado 
-				/*result = new ServiceRequest(rs.getString("attrName1"), rs
-						.getString("attrName2"),
-								rs.getDate("attrName3")
-								);
-								*/
+                //TODO: Remplazar con constructor adecuado
+                        result = new ServiceRequest(
+                                rs.getString("attrName1"),
+                                rs.getString("attrName2"),
+				rs.getDate("attrName3")
+
+				);
+
 				
 			} else {
 				throw new ServiceRequestNotFoundException();
@@ -214,8 +216,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 			stmtSelect = conn.prepareStatement(sbSelect.toString());
 			rs = stmtSelect.executeQuery();
 			while (rs.next()) {
-				//TODO: Remplazar con constructor adecuado
-				/*ServiceRequest servicerequest = new ServiceRequest(rs.getString("AttrName1"),
+				//TODO: Remplazar con constructor adecuado				/*ServiceRequest servicerequest = new ServiceRequest(rs.getString("AttrName1"),
 						rs.getDate("AttrName2"));
 				result.add(servicerequest); */
 			}
