@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collection;
 
 import org.apache.log4j.Logger;
 
@@ -14,12 +12,16 @@ import com.sabre.hd.easysr.dao.exceptions.DAORuntimeException;
 import com.sabre.hd.easysr.entities.ServiceRequest;
 import com.sabre.hd.easysr.persistence.dao.ServiceRequestDAO;
 import com.sabre.hd.easysr.persitence.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Hashtable;
 
 public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 
 	private static Logger logger = Logger.getLogger(ServiceRequestDAOImpl.class
 			.getName());
-	private static final String TABLE_NAME = "forms_template";
+	private static final String TABLE_NAME_FORM = "forms_template";
+        private static final String TABLE_NAME_FORM_FIELDS = "form_fields_template";
 
 
 	@Override
@@ -37,7 +39,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 			StringBuffer sbDelete = new StringBuffer();
 
 			sbDelete.append("DELETE FROM ");
-			sbDelete.append(ServiceRequestDAOImpl.TABLE_NAME);
+			sbDelete.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
 			sbDelete.append(" WHERE servicerequest_id = ?");
 
 			stmtDelete = conn.prepareStatement(sbDelete.toString());
@@ -69,44 +71,94 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 		Connection conn = DataSource.getConnection();
 
 		ServiceRequest result = null;
-		ResultSet rs = null;
+		ResultSet rsForm = null;
 		PreparedStatement stmtSelect = null;
 
 		try {
 			StringBuffer sbSelect = new StringBuffer();
 
 			sbSelect.append("SELECT * FROM ");
-			sbSelect.append(ServiceRequestDAOImpl.TABLE_NAME);
+			sbSelect.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
 			sbSelect.append(" WHERE form_id = ?");
 
 			stmtSelect = conn.prepareStatement(sbSelect.toString());
 
 			stmtSelect.setString(1, pk);
 
-			rs = stmtSelect.executeQuery();
-			if (rs.next()) {
-				
-      //TODO: Remplazar con constructor adecuado
-//      result = new ServiceRequest(
-//              rs.getString("attrName1"),
-//              rs.getString("attrName2"),
-//              rs.getDate("attrName3")   );
+			rsForm = stmtSelect.executeQuery();
 
+			if (rsForm.next()) {
+                            ResultSet rsForm_fields = null;
+                            PreparedStatement stmtSelect_fields = null;
+                            StringBuffer sbSelect_fields = new StringBuffer();
+                            sbSelect_fields.append("SELECT * FROM ");
+                            sbSelect_fields.append(ServiceRequestDAOImpl.TABLE_NAME_FORM_FIELDS);
+                            sbSelect_fields.append(" WHERE form_id = ?");
+                            stmtSelect_fields = conn.prepareStatement(sbSelect_fields.toString());
+                            stmtSelect_fields.setString(1, pk);
+                            rsForm_fields = stmtSelect_fields.executeQuery();
+           
+                                while (rsForm_fields.next()) {
+				rsForm_fields.getString("Valor");
+                                Hashtable ht = new Hashtable();
+                                ht.put(rsForm_fields.getString("Name"), rsForm_fields.getString("Value"));
+
+
+
+                                result.setUrl(ht.get("url").toString());
+                                result.setName(ht.get("name").toString());
+                                result.setRequestTitle(ht.get("requestTitle").toString());
+                                result.setRequestOverview(ht.get("requestOverview").toString());
+                                result.setBusinessUnit(ht.get("businessUnit").toString());
+                                result.setSystem(ht.get("system").toString());
+                                result.setPrimaveraId(ht.get("primaveraId").toString());
+                                result.setFRCR(ht.get("FRCR").toString());
+                                result.setSEDI(ht.get("SEDI").toString());
+                                result.setSabreAR(ht.get("sabreAR").toString());
+                                result.setSabrePR(ht.get("sabrePR").toString());
+                                result.setOwningCostCenter(ht.get("owningCostCenter").toString());
+                                result.setFundingCostCenter(ht.get("fundingCostCenter").toString());
+                                result.setRequestor(ht.get("requestor").toString());
+                                result.setVP(ht.get("VP").toString());
+                                result.setRequirements(ht.get("requirements").toString());
+                                result.setImplDate( ht.get("implDate").toString() );
+                                result.setCRUDActiveDirectory( (Boolean) ht.get("CRUDActiveDirectory"));
+                                result.setEDSAlreadyEngaged( (Boolean) ht.get("EDSAlreadyEngaged"));
+                                result.setImpactHost( (Boolean) ht.get("impactHost"));
+                                result.setImplDateASAP( (Boolean) ht.get("implDateASAP"));
+                                result.setInvolvePCI( (Boolean) ht.get("involvePCI"));
+                                result.setRequestorLoggedUser( (Boolean) ht.get("requestorLoggedUser"));
+                                result.setRequireAccess2VAR((Boolean)ht.get("requireAccess2VAR"));
+                                result.setRequireApplicationChange( (Boolean) ht.get("requireApplicationChange"));
+                                result.setRequireB2BVPN( (Boolean) ht.get("requireB2BVPN"));
+                                result.setRequireFirewallChange( (Boolean) ht.get("requireFirewallChange"));
+                                result.setRequireHardware( (Boolean) ht.get("requireHardware"));
+                                result.setRequireIncreaseTransactions( (Boolean) ht.get("requireIncreaseTransactions"));
+                                result.setRequireNewCircuit( (Boolean) ht.get("requireNewCircuit"));
+                                result.setRequireNewSoftware( (Boolean) ht.get("requireNewSoftware"));
+                                result.setRequireOfficeOpening( (Boolean) ht.get("requireOfficeOpening"));
+                                result.setRequireReport( (Boolean) ht.get("requireReport"));
+                                result.setRequireSSL( (Boolean) ht.get("requireSSL"));
+                                result.setRequireSecurityException( (Boolean) ht.get("requireSecurityException"));
+                                result.setRequireStorage( (Boolean) ht.get("requireStorage"));
+                                result.setRequireWebHosting( (Boolean) ht.get("requireWebHosting"));
+                                }
 				
 			} else {
 				throw new ServiceRequestNotFoundException();
-			}
-
-		} catch (SQLException ex) {
+                                }
+                }
+		 catch (SQLException ex) {
 			logger.error(ex);
 			throw new DAORuntimeException(ex);
 		} finally {
 			DBUtil.closeStatement(stmtSelect);
-			DBUtil.closeResultSet(rs);
+			DBUtil.closeResultSet(rsForm);
 			DBUtil.closeJDBCConnection(conn);
 		}
 		return result;
-	}
+        }
+	
 
 	@Override
 	public void insertServiceRequest(ServiceRequest servicerequest) {
@@ -118,7 +170,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 		try {
 			StringBuffer sbInsert = new StringBuffer();
 			sbInsert.append("INSERT INTO ");
-			sbInsert.append(ServiceRequestDAOImpl.TABLE_NAME);
+			sbInsert.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
 			
 			//TODO: Modificar los attr para hacer el insert
 			
@@ -163,7 +215,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 			StringBuffer sbUpdate = new StringBuffer();
 
 			sbUpdate.append("UPDATE ");
-			sbUpdate.append(ServiceRequestDAOImpl.TABLE_NAME);
+			sbUpdate.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
 			sbUpdate.append(" SET ");
 
 			//TODO; Remplazar con SR attrs.
@@ -209,7 +261,7 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 			StringBuffer sbSelect = new StringBuffer();
 
 			sbSelect.append("SELECT * FROM ");
-			sbSelect.append(ServiceRequestDAOImpl.TABLE_NAME);
+			sbSelect.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
 
 			stmtSelect = conn.prepareStatement(sbSelect.toString());
 			rs = stmtSelect.executeQuery();

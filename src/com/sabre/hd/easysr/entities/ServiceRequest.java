@@ -13,6 +13,8 @@ public class ServiceRequest extends PersistentObject{
 	private static Logger logger = Logger.getLogger(ServiceRequest.class.getName());
 	private ServiceRequestDAO dao;
 
+  private String url;
+  private String name;
   private String requestTitle;
   private String requestOverview;
   private String businessUnit;
@@ -27,7 +29,7 @@ public class ServiceRequest extends PersistentObject{
   private String requestor;
   private String VP;
   private String requirements;
-  private Date   implDate;
+  private String implDate;
   private boolean CRUDActiveDirectory;
   private boolean EDSAlreadyEngaged;
   private boolean impactHost;
@@ -59,43 +61,45 @@ public class ServiceRequest extends PersistentObject{
     
   }
 
-	public ServiceRequest (String requestTitle,   String requestOverview,   String businessUnit,   String system,   String primaveraId,   String FRCR,   String SEDI,   String sabreAR,   String sabrePR,   String owningCostCenter,   String fundingCostCenter,   String requestor,   String VP,   String requirements,   Date   implDate,   boolean CRUDActiveDirectory,   boolean EDSAlreadyEngaged,   boolean impactHost,   boolean implDateASAP,   boolean involvePCI,   boolean requestorLoggedUser,   boolean requireAccess2VAR,   boolean requireApplicationChange,   boolean requireB2BVPN,   boolean requireFirewallChange,   boolean requireHardware,   boolean requireIncreaseTransactions,   boolean requireNewCircuit,   boolean requireNewSoftware,   boolean requireOfficeOpening,   boolean requireReport,   boolean requireSSL,   boolean requireSecurityException,   boolean requireStorage,   boolean requireWebHosting)
+	public ServiceRequest (String url, String name, String requestTitle,   String requestOverview,   String businessUnit,   String system,   String primaveraId,   String FRCR,   String SEDI,   String sabreAR,   String sabrePR,   String owningCostCenter,   String fundingCostCenter,   String requestor,   String VP,   String requirements,   String   implDate,   boolean CRUDActiveDirectory,   boolean EDSAlreadyEngaged,   boolean impactHost,   boolean implDateASAP,   boolean involvePCI,   boolean requestorLoggedUser,   boolean requireAccess2VAR,   boolean requireApplicationChange,   boolean requireB2BVPN,   boolean requireFirewallChange,   boolean requireHardware,   boolean requireIncreaseTransactions,   boolean requireNewCircuit,   boolean requireNewSoftware,   boolean requireOfficeOpening,   boolean requireReport,   boolean requireSSL,   boolean requireSecurityException,   boolean requireStorage,   boolean requireWebHosting)
 	{
-        this.setRequestTitle(requestTitle);
-        this.setRequestOverview(requestOverview);
-        this.setBusinessUnit(businessUnit);
-        this.setSystem(system);
-        this.setPrimaveraId(primaveraId);
-        this.setFRCR(FRCR);
-        this.setSEDI(SEDI);
-        this.setSabreAR(sabreAR);
-        this.setSabrePR(sabrePR);
-        this.setOwningCostCenter(owningCostCenter);
-        this.setFundingCostCenter(fundingCostCenter);
-        this.setRequestor(requestor);
-        this.setVP(VP);
-        this.setRequirements(requirements);
-        this.setImplDate(implDate);
-        this.setCRUDActiveDirectory(CRUDActiveDirectory);
-        this.setEDSAlreadyEngaged(EDSAlreadyEngaged);
-        this.setImpactHost(impactHost);
-        this.setImplDateASAP(implDateASAP);
-        this.setInvolvePCI(involvePCI);
-        this.setRequestorLoggedUser(requestorLoggedUser);
-        this.setRequireAccess2VAR(requireAccess2VAR);
-        this.setRequireApplicationChange(requireApplicationChange);
-        this.setRequireB2BVPN(requireB2BVPN);
-        this.setRequireFirewallChange(requireFirewallChange);
-        this.setRequireHardware(requireHardware);
-        this.setRequireIncreaseTransactions(requireIncreaseTransactions);
-        this.setRequireNewCircuit(requireNewCircuit);
-        this.setRequireNewSoftware(requireNewSoftware);
-        this.setRequireOfficeOpening(requireOfficeOpening);
-        this.setRequireReport(requireReport);
-        this.setRequireSSL(requireSSL);
-        this.setRequireSecurityException(requireSecurityException);
-        this.setRequireStorage(requireStorage);
-        this.setRequireWebHosting(requireWebHosting);
+            this.setUrl(url);
+            this.setName(name);
+            this.setRequestTitle(requestTitle);
+            this.setRequestOverview(requestOverview);
+            this.setBusinessUnit(businessUnit);
+            this.setSystem(system);
+            this.setPrimaveraId(primaveraId);
+            this.setFRCR(FRCR);
+            this.setSEDI(SEDI);
+            this.setSabreAR(sabreAR);
+            this.setSabrePR(sabrePR);
+            this.setOwningCostCenter(owningCostCenter);
+            this.setFundingCostCenter(fundingCostCenter);
+            this.setRequestor(requestor);
+            this.setVP(VP);
+            this.setRequirements(requirements);
+            this.setImplDate(implDate);
+            this.setCRUDActiveDirectory(CRUDActiveDirectory);
+            this.setEDSAlreadyEngaged(EDSAlreadyEngaged);
+            this.setImpactHost(impactHost);
+            this.setImplDateASAP(implDateASAP);
+            this.setInvolvePCI(involvePCI);
+            this.setRequestorLoggedUser(requestorLoggedUser);
+            this.setRequireAccess2VAR(requireAccess2VAR);
+            this.setRequireApplicationChange(requireApplicationChange);
+            this.setRequireB2BVPN(requireB2BVPN);
+            this.setRequireFirewallChange(requireFirewallChange);
+            this.setRequireHardware(requireHardware);
+            this.setRequireIncreaseTransactions(requireIncreaseTransactions);
+            this.setRequireNewCircuit(requireNewCircuit);
+            this.setRequireNewSoftware(requireNewSoftware);
+            this.setRequireOfficeOpening(requireOfficeOpening);
+            this.setRequireReport(requireReport);
+            this.setRequireSSL(requireSSL);
+            this.setRequireSecurityException(requireSecurityException);
+            this.setRequireStorage(requireStorage);
+            this.setRequireWebHosting(requireWebHosting);
         }
 
   public static void launchSRCreation() {
@@ -142,32 +146,38 @@ public class ServiceRequest extends PersistentObject{
 		
 	}
 
-  /**
-   * @return the requestTitle
-   */
+
   public String getRequestTitle() {
     return requestTitle;
   }
 
-  /**
-   * @param requestTitle the requestTitle to set
-   */
   public void setRequestTitle(String requestTitle) {
     this.requestTitle = requestTitle;
   }
 
-  /**
-   * @return the requestOverview
-   */
-  public String getRequestOverview() {
-    return requestOverview;
+
+  public String getName() {
+      return name;
   }
 
-  /**
-   * @param requestOverview the requestOverview to set
-   */
-  public void setRequestOverview(String requestOverview) {
-    this.requestOverview = requestOverview;
+  public void setName(String name){
+      this.name = name;
+  }
+
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+  
+  public String getRequestOverview() {
+    return url;
+  }
+
+  public void setRequestOverview(String url) {
+    this.url = url;
   }
 
   /**
@@ -341,14 +351,14 @@ public class ServiceRequest extends PersistentObject{
   /**
    * @return the implDate
    */
-  public Date getImplDate() {
+  public String getImplDate() {
     return implDate;
   }
 
   /**
    * @param implDate the implDate to set
    */
-  public void setImplDate(Date implDate) {
+  public void setImplDate(String implDate) {
     this.implDate = implDate;
   }
 
