@@ -5,7 +5,7 @@
 
 package com.sabre.hd.easysr;
 
-import com.sabre.hd.easysr.formLogic.SRLogic;
+import com.sabre.hd.easysr.entities.ServiceRequest;
 import com.sabre.hd.gui.NewSRTemplate;
 
 /**
@@ -15,12 +15,16 @@ import com.sabre.hd.gui.NewSRTemplate;
 public class Facade {
 
   public static void createMySR() {
-    SRLogic.createMySR();
+    ServiceRequest.launchSRCreation();
   }
 
   public static void newSRTemplate() {
     NewSRTemplate ventanaNewSRTemplate = new NewSRTemplate();
     ventanaNewSRTemplate.setVisible(true);
+  }
+
+  public static boolean saveSR(ServiceRequest aServiceRequest) {
+    return ServiceRequest.save();
   }
 
 

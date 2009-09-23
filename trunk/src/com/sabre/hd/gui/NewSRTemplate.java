@@ -11,6 +11,10 @@
 
 package com.sabre.hd.gui;
 
+import com.sabre.hd.easysr.Facade;
+import com.sabre.hd.easysr.entities.ServiceRequest;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author SG0894180
@@ -91,11 +95,12 @@ public class NewSRTemplate extends javax.swing.JFrame {
     btnSave = new javax.swing.JButton();
     btnLoad = new javax.swing.JButton();
     btnNew = new javax.swing.JButton();
+    btnClose = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-    setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
+    setFont(new java.awt.Font("Verdana", 0, 10));
 
-    jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+    jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14));
     jLabel1.setText("New SR Template");
 
     chkEDSAlreadyEngaged.setText("EDS Already Engaged");
@@ -227,8 +232,6 @@ public class NewSRTemplate extends javax.swing.JFrame {
             .addComponent(chkEDSAlreadyEngaged)))
         .addContainerGap(23, Short.MAX_VALUE))
     );
-
-    chkRequireB2BVPN.getAccessibleContext().setAccessibleDescription("null");
 
     cmbBusinessUnit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Airline Solutions" }));
 
@@ -433,10 +436,17 @@ public class NewSRTemplate extends javax.swing.JFrame {
     );
 
     btnSave.setText("Save");
+    btnSave.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSaveActionPerformed(evt);
+      }
+    });
 
     btnLoad.setText("Load");
 
     btnNew.setText("New");
+
+    btnClose.setText("Close");
 
     javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
     jPanel4.setLayout(jPanel4Layout);
@@ -447,7 +457,8 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
           .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
+          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+          .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE))
         .addContainerGap())
     );
     jPanel4Layout.setVerticalGroup(
@@ -459,7 +470,9 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addComponent(btnLoad)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(btnNew)
-        .addContainerGap(76, Short.MAX_VALUE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(btnClose)
+        .addContainerGap(47, Short.MAX_VALUE))
     );
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -527,6 +540,20 @@ public class NewSRTemplate extends javax.swing.JFrame {
       // TODO add your handling code here:
     }//GEN-LAST:event_txtRequestTitleActionPerformed
 
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+      if (saveSRTemplate()) {
+        JOptionPane.showMessageDialog(this,
+          "Your SR Template was succesfully Saved!",
+          "Success",
+          JOptionPane.INFORMATION_MESSAGE);
+      } else {
+        JOptionPane.showMessageDialog(this,
+          "Your SR Template could not be saved!",
+          "Error",
+          JOptionPane.ERROR_MESSAGE);
+      }
+    }//GEN-LAST:event_btnSaveActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -539,6 +566,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JButton btnClose;
   private javax.swing.JButton btnLoad;
   private javax.swing.JButton btnNew;
   private javax.swing.JButton btnSave;
@@ -600,5 +628,20 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JTextField txtSabrePR;
   private javax.swing.JTextField txtVP;
   // End of variables declaration//GEN-END:variables
+
+  private boolean saveSRTemplate() {
+    if (!checkSRFields()) {
+      return false;
+    }
+    ServiceRequest aServiceRequest = new ServiceRequest();
+    if (!Facade.saveSR(aServiceRequest)) {
+      return false;
+    }
+    return true;
+  }
+
+  private boolean checkSRFields() {
+    return true;
+  }
 
 }

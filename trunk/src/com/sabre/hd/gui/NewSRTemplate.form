@@ -247,9 +247,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Require B2B VPN"/>
           </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="null"/>
-          </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="chkRequireApplicationChange">
           <Properties>
@@ -640,6 +637,7 @@
                       <Component id="btnSave" alignment="0" pref="192" max="32767" attributes="0"/>
                       <Component id="btnLoad" alignment="1" pref="192" max="32767" attributes="0"/>
                       <Component id="btnNew" alignment="1" pref="192" max="32767" attributes="0"/>
+                      <Component id="btnClose" alignment="0" pref="192" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -654,7 +652,9 @@
                   <Component id="btnLoad" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnNew" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="76" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnClose" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="47" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -664,6 +664,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Save"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSaveActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnLoad">
           <Properties>
@@ -673,6 +676,11 @@
         <Component class="javax.swing.JButton" name="btnNew">
           <Properties>
             <Property name="text" type="java.lang.String" value="New"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnClose">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Close"/>
           </Properties>
         </Component>
       </SubComponents>
