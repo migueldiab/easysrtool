@@ -3,8 +3,6 @@ package com.sabre.hd.easysr;
 import org.apache.log4j.Logger;
 import com.sabre.hd.easysr.forms.*;
 import com.sabre.hd.gui.*;
-import com.sabre.hd.easysr.dao.impl.*;
-
 
 public class EasySR {
 
@@ -25,9 +23,9 @@ public class EasySR {
 //			gt.run();
 //			gt.finish();
 
-		 ServiceRequestDAOImpl srimpl = new  ServiceRequestDAOImpl();
-                 srimpl.findAll();
-
+      EasySRMain ventanaMain = new EasySRMain();
+      ventanaMain.setVisible(true);
+			
 		}catch (Exception e){
 			logger.error(e);
 		}
