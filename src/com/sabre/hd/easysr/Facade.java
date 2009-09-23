@@ -6,6 +6,7 @@
 package com.sabre.hd.easysr;
 
 import com.sabre.hd.easysr.entities.ServiceRequest;
+import com.sabre.hd.gui.NewCRTemplate;
 import com.sabre.hd.gui.NewSRTemplate;
 
 /**
@@ -25,6 +26,11 @@ public class Facade {
 
   public static boolean saveSR(ServiceRequest aServiceRequest) {
     return ServiceRequest.save();
+  }
+
+  public static void newCRTemplate() {
+    NewCRTemplate ventanaNewCRTemplate = new NewCRTemplate();
+    ventanaNewCRTemplate.setVisible(true);
   }
 
 

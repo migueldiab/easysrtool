@@ -54,7 +54,11 @@ public class ServiceRequest extends PersistentObject{
     return true;
   }
 
-  
+  public ServiceRequest ()
+	{
+    
+  }
+
 	public ServiceRequest (String requestTitle,   String requestOverview,   String businessUnit,   String system,   String primaveraId,   String FRCR,   String SEDI,   String sabreAR,   String sabrePR,   String owningCostCenter,   String fundingCostCenter,   String requestor,   String VP,   String requirements,   Date   implDate,   boolean CRUDActiveDirectory,   boolean EDSAlreadyEngaged,   boolean impactHost,   boolean implDateASAP,   boolean involvePCI,   boolean requestorLoggedUser,   boolean requireAccess2VAR,   boolean requireApplicationChange,   boolean requireB2BVPN,   boolean requireFirewallChange,   boolean requireHardware,   boolean requireIncreaseTransactions,   boolean requireNewCircuit,   boolean requireNewSoftware,   boolean requireOfficeOpening,   boolean requireReport,   boolean requireSSL,   boolean requireSecurityException,   boolean requireStorage,   boolean requireWebHosting)
 	{
         this.setRequestTitle(requestTitle);

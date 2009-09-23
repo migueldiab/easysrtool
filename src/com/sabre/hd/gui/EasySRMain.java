@@ -38,6 +38,7 @@ public class EasySRMain extends javax.swing.JFrame {
 
     jLabel1 = new javax.swing.JLabel();
     btnNewSRTemplate = new javax.swing.JButton();
+    btnNewCRTemplate = new javax.swing.JButton();
     jMenuBar1 = new javax.swing.JMenuBar();
     jMenu1 = new javax.swing.JMenu();
     jMenu2 = new javax.swing.JMenu();
@@ -53,6 +54,13 @@ public class EasySRMain extends javax.swing.JFrame {
     btnNewSRTemplate.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnNewSRTemplateActionPerformed(evt);
+      }
+    });
+
+    btnNewCRTemplate.setText("New CR Template");
+    btnNewCRTemplate.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnNewCRTemplateActionPerformed(evt);
       }
     });
 
@@ -82,7 +90,8 @@ public class EasySRMain extends javax.swing.JFrame {
         .addContainerGap()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(jLabel1)
-          .addComponent(btnNewSRTemplate))
+          .addComponent(btnNewSRTemplate)
+          .addComponent(btnNewCRTemplate))
         .addContainerGap(250, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
@@ -92,7 +101,9 @@ public class EasySRMain extends javax.swing.JFrame {
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(btnNewSRTemplate)
-        .addContainerGap(212, Short.MAX_VALUE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(btnNewCRTemplate)
+        .addContainerGap(183, Short.MAX_VALUE))
     );
 
     pack();
@@ -101,6 +112,10 @@ public class EasySRMain extends javax.swing.JFrame {
     private void btnNewSRTemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewSRTemplateActionPerformed
       Facade.newSRTemplate();
     }//GEN-LAST:event_btnNewSRTemplateActionPerformed
+
+    private void btnNewCRTemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewCRTemplateActionPerformed
+      Facade.newCRTemplate();
+    }//GEN-LAST:event_btnNewCRTemplateActionPerformed
 
     /**
     * @param args the command line arguments
@@ -114,6 +129,7 @@ public class EasySRMain extends javax.swing.JFrame {
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JButton btnNewCRTemplate;
   private javax.swing.JButton btnNewSRTemplate;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JMenu jMenu1;
