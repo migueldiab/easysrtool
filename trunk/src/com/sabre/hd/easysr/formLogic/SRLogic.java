@@ -6,7 +6,7 @@
 package com.sabre.hd.easysr.formLogic;
 
 import com.sabre.hd.easysr.forms.EcpmNewChange;
-import com.sabre.hd.gui.Main;
+import com.sabre.hd.gui.EasySRMain;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -23,7 +23,7 @@ public class SRLogic {
         f1.run();
         f1.finish();
       } catch (Exception ex) {
-        Logger.getLogger(Main.class.getName()).log(Level.ERROR, null, ex);
+        Logger.getLogger(EasySRMain.class.getName()).log(Level.ERROR, null, ex);
       }
   }
       

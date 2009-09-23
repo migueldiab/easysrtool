@@ -20,10 +20,10 @@ import java.util.logging.Logger;
  *
  * @author SG0894180
  */
-public class Main extends javax.swing.JFrame {
+public class EasySRMain extends javax.swing.JFrame {
 
     /** Creates new form main */
-    public Main() {
+    public EasySRMain() {
         initComponents();
     }
 
@@ -37,18 +37,42 @@ public class Main extends javax.swing.JFrame {
   private void initComponents() {
 
     jLabel1 = new javax.swing.JLabel();
-    btnCreateMySR = new javax.swing.JButton();
+    btnNewSRTemplate = new javax.swing.JButton();
+    jMenuBar1 = new javax.swing.JMenuBar();
+    jMenu1 = new javax.swing.JMenu();
+    jMenu2 = new javax.swing.JMenu();
+    jMenu3 = new javax.swing.JMenu();
+    jMenuItem1 = new javax.swing.JMenuItem();
+    jMenuItem2 = new javax.swing.JMenuItem();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     jLabel1.setText("Welcome to the Easy SR Tool");
 
-    btnCreateMySR.setText("Create My SR!");
-    btnCreateMySR.addActionListener(new java.awt.event.ActionListener() {
+    btnNewSRTemplate.setText("New SR Template");
+    btnNewSRTemplate.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnCreateMySRActionPerformed(evt);
+        btnNewSRTemplateActionPerformed(evt);
       }
     });
+
+    jMenu1.setText("File");
+    jMenuBar1.add(jMenu1);
+
+    jMenu2.setText("Edit");
+    jMenuBar1.add(jMenu2);
+
+    jMenu3.setText("Templates");
+
+    jMenuItem1.setText("Service Request");
+    jMenu3.add(jMenuItem1);
+
+    jMenuItem2.setText("Change Request");
+    jMenu3.add(jMenuItem2);
+
+    jMenuBar1.add(jMenu3);
+
+    setJMenuBar(jMenuBar1);
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -56,29 +80,27 @@ public class Main extends javax.swing.JFrame {
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
-        .addComponent(jLabel1)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jLabel1)
+          .addComponent(btnNewSRTemplate))
         .addContainerGap(250, Short.MAX_VALUE))
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addContainerGap(285, Short.MAX_VALUE)
-        .addComponent(btnCreateMySR)
-        .addContainerGap())
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(28, 28, 28)
         .addComponent(jLabel1)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
-        .addComponent(btnCreateMySR)
-        .addContainerGap())
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(btnNewSRTemplate)
+        .addContainerGap(212, Short.MAX_VALUE))
     );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCreateMySRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateMySRActionPerformed
-      Facade.createMySR();
-    }//GEN-LAST:event_btnCreateMySRActionPerformed
+    private void btnNewSRTemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewSRTemplateActionPerformed
+      Facade.newSRTemplate();
+    }//GEN-LAST:event_btnNewSRTemplateActionPerformed
 
     /**
     * @param args the command line arguments
@@ -86,14 +108,20 @@ public class Main extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new EasySRMain().setVisible(true);
             }
         });
     }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton btnCreateMySR;
+  private javax.swing.JButton btnNewSRTemplate;
   private javax.swing.JLabel jLabel1;
+  private javax.swing.JMenu jMenu1;
+  private javax.swing.JMenu jMenu2;
+  private javax.swing.JMenu jMenu3;
+  private javax.swing.JMenuBar jMenuBar1;
+  private javax.swing.JMenuItem jMenuItem1;
+  private javax.swing.JMenuItem jMenuItem2;
   // End of variables declaration//GEN-END:variables
 
 }
