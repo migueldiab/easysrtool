@@ -7,6 +7,8 @@ package com.sabre.hd.easysr.forms;
 
 import com.sabre.hd.easysr.entities.ChangeRequest;
 import com.sabre.hd.easysr.entities.ServiceRequest;
+import com.sabre.hd.easysr.peer.ChangeRequestPeer;
+import com.sabre.hd.easysr.peer.ServiceRequestPeer;
 
 /**
  *
@@ -23,10 +25,21 @@ public class SeleniumLauncher {
   }
 
   public static void executeSR(ServiceRequest aServiceRequest) {
-    SRNewSR newSRRobot = new SRNewSR();
+    //SRNewSR newSRRobot = new SRNewSR();
+    EdssrtServiceRequest newSRRobot = new EdssrtServiceRequest();
     newSRRobot.setEntity(aServiceRequest);
     newSRRobot.load();
     newSRRobot.run();
     newSRRobot.finish();
+  }
+
+  public static void executeWorkflow() {
+    ServiceRequest unSR = ServiceRequestPeer.cargaUnSr();
+    ChangeRequest unCR = ChangeRequestPeer.cargaUnCr();
+
+    executeCR(unCR);
+    executeSR(unSR);
+
+    
   }
 }

@@ -24,7 +24,7 @@ public class ChangeRequestPeer {
 
   }
 
-    private static  ChangeRequest cargaUnCr(){
+    public static  ChangeRequest cargaUnCr(){
 
     ChangeRequest aChangeRequestCert = new ChangeRequest();
     ChangeRequest aChangeRequestProd = new ChangeRequest();

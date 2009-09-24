@@ -27,7 +27,7 @@ public class ServiceRequestPeer {
     
   }
 
-  private static ServiceRequest cargaUnSr() {
+  public static ServiceRequest cargaUnSr() {
     ServiceRequest aServiceRequest = new ServiceRequest();
     aServiceRequest.setName("Another SR");
     aServiceRequest.setRequestTitle("txtRequestTitle");
