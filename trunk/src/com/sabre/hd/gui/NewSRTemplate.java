@@ -18,6 +18,8 @@ import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import com.sabre.hd.easysr.entities.*;
 import com.sabre.hd.easysr.Facade.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 /**
  *
  * @author SG0894180
@@ -639,6 +641,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
           "Error",
           JOptionPane.ERROR_MESSAGE);
       }
+      loadSRTemplates();
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
@@ -782,6 +785,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     }
     ServiceRequest aServiceRequest = fillSRObject();
     if (!Facade.saveSR(aServiceRequest)) {
+      
       return false;
     }
     return true;
@@ -833,54 +837,14 @@ public class NewSRTemplate extends javax.swing.JFrame {
   }
 
   private boolean loadSRTemplates() {
-    ServiceRequest aServiceRequest = Facade.loadDemoSR();
     srTemplatesList.clear();
-    srTemplatesList.addElement(aServiceRequest);
-    aServiceRequest = cargaUnSr();
-    srTemplatesList.addElement(aServiceRequest);
+    ArrayList<ServiceRequest> allServiceRequests = Facade.getAllServiceRequests();
+    for (ServiceRequest aServiceRequest : allServiceRequests) {
+      srTemplatesList.addElement(aServiceRequest);
+    }
     return true;
   }
 
-  private ServiceRequest cargaUnSr() {
-    ServiceRequest aServiceRequest = new ServiceRequest();
-    aServiceRequest.setName("Another SR");
-    aServiceRequest.setRequestTitle("txtRequestTitle");
-    aServiceRequest.setRequestOverview("txtRequestOverview");
-    aServiceRequest.setBusinessUnit("cmbBusinessUnit");
-    aServiceRequest.setSystem("cmbSystem");
-    aServiceRequest.setPrimaveraId("txtPrimaveraId");
-    aServiceRequest.setFRCR("txtFRCRId");
-    aServiceRequest.setSEDI("txtSEDIId");
-    aServiceRequest.setSabreAR("txtSabreAR");
-    aServiceRequest.setSabrePR("txtSabrePR");
-    aServiceRequest.setOwningCostCenter("txtOwningCostCenter");
-    aServiceRequest.setFundingCostCenter("txtFundingCostCenter");
-    aServiceRequest.setRequestor("txtRequestor");
-    aServiceRequest.setVP("txtVP");
-    aServiceRequest.setRequirements("txtRequirements");
-    aServiceRequest.setImplDate("txtImplDate");
-    aServiceRequest.setCRUDActiveDirectory(true);
-    aServiceRequest.setEDSAlreadyEngaged(true);
-    aServiceRequest.setImpactHost(true);
-    aServiceRequest.setImplDateASAP(true);
-    aServiceRequest.setInvolvePCI(true);
-    aServiceRequest.setRequestorLoggedUser(true);
-    aServiceRequest.setRequireAccess2VAR(true);
-    aServiceRequest.setRequireApplicationChange(true);
-    aServiceRequest.setRequireB2BVPN(true);
-    aServiceRequest.setRequireFirewallChange(true);
-    aServiceRequest.setRequireHardware(true);
-    aServiceRequest.setRequireIncreaseTransactions(true);
-    aServiceRequest.setRequireNewCircuit(true);
-    aServiceRequest.setRequireNewSoftware(true);
-    aServiceRequest.setRequireOfficeOpening(true);
-    aServiceRequest.setRequireReport(true);
-    aServiceRequest.setRequireSSL(true);
-    aServiceRequest.setRequireSecurityException(true);
-    aServiceRequest.setRequireStorage(true);
-    aServiceRequest.setRequireWebHosting(true);
-    return aServiceRequest;
-  }
 
   private boolean fillSRFields(ServiceRequest aServiceRequest) {
     this.txtSRName.setText(aServiceRequest.getName());
