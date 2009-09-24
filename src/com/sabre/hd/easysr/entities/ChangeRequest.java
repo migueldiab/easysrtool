@@ -1132,4 +1132,9 @@ public class ChangeRequest extends PersistentObject{
         this.potentialRisk = potentialRisk;
     }
 
+  @Override
+  public String toString() {
+    return this.getChangeName();
+  }
+
 }
