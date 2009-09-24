@@ -34,7 +34,7 @@ public class Facade {
   }
  
   public static boolean saveSR(ServiceRequest aServiceRequest) {
-    return ServiceRequest.save();
+    return ServiceRequestPeer.save(aServiceRequest);
   }
 
   public static void newCRTemplate() {

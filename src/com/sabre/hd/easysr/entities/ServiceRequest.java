@@ -683,5 +683,14 @@ public class ServiceRequest extends PersistentObject{
     return this.getName();
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    try {
+      ServiceRequest aSR = (ServiceRequest) obj;
+      return this.getName().equals(aSR.getName());
+    } catch (Exception e) {
+      return false;
+    }
 
+  }
 }

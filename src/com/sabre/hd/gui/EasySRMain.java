@@ -53,7 +53,7 @@ public class EasySRMain extends javax.swing.JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setTitle("Paperwork Writer");
 
-    jLabel1.setFont(new java.awt.Font("Verdana", 2, 18)); // NOI18N
+    jLabel1.setFont(new java.awt.Font("Verdana", 2, 18));
     jLabel1.setText("Welcome to the Paperwork Writer");
 
     btnNewSRTemplate.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
@@ -65,7 +65,7 @@ public class EasySRMain extends javax.swing.JFrame {
       }
     });
 
-    btnNewCRTemplate.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+    btnNewCRTemplate.setFont(new java.awt.Font("Verdana", 0, 14));
     btnNewCRTemplate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/22.png"))); // NOI18N
     btnNewCRTemplate.setText("New CR Template");
     btnNewCRTemplate.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +86,7 @@ public class EasySRMain extends javax.swing.JFrame {
     jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/13.png"))); // NOI18N
     jLabel5.setText("Reliable");
 
-    btnNewCRTemplate1.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+    btnNewCRTemplate1.setFont(new java.awt.Font("Verdana", 0, 14));
     btnNewCRTemplate1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/87.png"))); // NOI18N
     btnNewCRTemplate1.setText("Your Automation Could Be Here!");
     btnNewCRTemplate1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,38 +125,40 @@ public class EasySRMain extends javax.swing.JFrame {
             .addComponent(btnNewCRTemplate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btnNewSRTemplate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
           .addComponent(jLabel1))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+              .addGap(70, 70, 70)
+              .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addContainerGap(192, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+              .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addGap(30, 30, 30)))
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(196, 196, 196))
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(141, 141, 141))
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(87, 87, 87))))
+            .addGap(111, 111, 111))))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(19, 19, 19)
+        .addComponent(jLabel1)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-            .addComponent(jLabel4)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jLabel3)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jLabel5))
-          .addGroup(layout.createSequentialGroup()
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jLabel1)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(btnNewSRTemplate)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(btnNewCRTemplate)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(btnNewCRTemplate1)))
+            .addComponent(btnNewCRTemplate))
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jLabel4)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(jLabel3)))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(btnNewCRTemplate1)
+          .addComponent(jLabel5))
         .addContainerGap(20, Short.MAX_VALUE))
     );
 

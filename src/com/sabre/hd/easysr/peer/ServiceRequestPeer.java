@@ -112,4 +112,15 @@ public class ServiceRequestPeer {
 
     return aServiceRequestCert;
   }
+
+  public static boolean save(ServiceRequest aServiceRequest) {
+    ArrayList<ServiceRequest> allServiceRequests = ServiceRequestPeer.getAll();
+
+    if (allServiceRequests.contains(aServiceRequest)) {
+      allServiceRequests.remove(aServiceRequest);
+      allServiceRequests.add(aServiceRequest);
+    }
+
+    return true;
+  }
 }
