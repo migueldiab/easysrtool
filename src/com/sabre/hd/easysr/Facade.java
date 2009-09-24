@@ -5,12 +5,14 @@
 
 package com.sabre.hd.easysr;
 
-import com.sabre.hd.easysr.entities.Demo;
 import com.sabre.hd.easysr.entities.ServiceRequest;
 import com.sabre.hd.easysr.entities.ChangeRequest;
 import com.sabre.hd.easysr.forms.SeleniumLauncher;
+import com.sabre.hd.easysr.peer.ChangeRequestPeer;
+import com.sabre.hd.easysr.peer.ServiceRequestPeer;
 import com.sabre.hd.gui.NewCRTemplate;
 import com.sabre.hd.gui.NewSRTemplate;
+import java.util.ArrayList;
 
 /**
  *
@@ -40,14 +42,12 @@ public class Facade {
     ventanaNewCRTemplate.setVisible(true);
   }
 
-  public static ServiceRequest loadDemoSR(){
-    Demo demo = new Demo();
-    return demo.cargaUnSr();
+  public static ArrayList<ServiceRequest> getAllServiceRequests() {
+    return ServiceRequestPeer.getAll();
   }
 
-  public static ChangeRequest loadDemoCR(){
-    Demo demo = new Demo();
-    return demo.cargaUnCr();
+  public static ArrayList<ChangeRequest> getAllChangeRequests() {
+    return ChangeRequestPeer.getAll();
   }
 
 }
