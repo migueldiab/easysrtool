@@ -4,24 +4,20 @@ import com.sabre.hd.easysr.entities.ChangeRequest;
 import java.awt.event.KeyEvent;
 
 public class EcpmNewChange extends ServiceRequestRobot{
-	
 	  private ChangeRequest cr;
-	
+
 	  public EcpmNewChange(){
-		  
 		  this.setBaseUrl("http://ecpm.sea.eds.com/");
 		  this.setPage("/");
-		  
 	  }
 	  
-	  public void setEntity(ChangeRequest changerequest)
-	  //public void setEntity(ChangeRequest cr)
+	  public void setEntity(ChangeRequest changerequest)	  
 	  {
-		this.cr =  changerequest;
-	  
+      this.cr = changerequest;
 	  }
 	
-	  public void run() {
+	  public void run()
+    {
 		  try{
 			  			  			  
 				// login page			 
@@ -281,9 +277,10 @@ public class EcpmNewChange extends ServiceRequestRobot{
 			//remoteControl.assertEquals("A valid Installer Phone Number must be entered.\nA valid Installer Name must be entered.\nA valid Primary Contact Phone Number must be entered.\nA valid Primary Contact Name must be entered.\nA valid Manager ID must be entered.\nA valid Employee ID must be entered.\nA value  for SERVICE REQUEST must be Entered.\nA valid Change Name must be entered.\nAt least one customer must be entered for Customers Impacted.\nA valid Change Description must be entered.\nA valid Category Code must be entered.\nA valid Change Justification must be entered.\nYou must associate at least one asset.", selenium.getAlert());
 			*/
 			
-		  }catch (Exception e){
-                       System.out.print(e);
-			logger.error(e);  
-	  	  }		  
+		  }
+      catch (Exception e) {
+        System.out.print(e);
+        logger.error(e);
+	  	}		  
 	  }
 }

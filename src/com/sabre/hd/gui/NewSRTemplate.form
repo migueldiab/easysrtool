@@ -77,11 +77,12 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="btnSave" alignment="0" pref="186" max="32767" attributes="0"/>
                       <Component id="btnLoad" alignment="1" pref="186" max="32767" attributes="0"/>
                       <Component id="btnNew" alignment="1" pref="186" max="32767" attributes="0"/>
                       <Component id="btnClose" alignment="0" pref="186" max="32767" attributes="0"/>
+                      <Component id="jButton1" alignment="0" pref="186" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -98,6 +99,8 @@
                   <Component id="btnNew" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnClose" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -106,6 +109,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnSave">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/sabre/hd/resources/images/disk.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Save"/>
           </Properties>
           <Events>
@@ -114,6 +120,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLoad">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/sabre/hd/resources/images/folder_add.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Load"/>
           </Properties>
           <Events>
@@ -122,6 +131,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnNew">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/sabre/hd/resources/images/page.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="New"/>
           </Properties>
           <Events>
@@ -130,10 +142,24 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnClose">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/sabre/hd/resources/images/cancel.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Close"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCloseActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/com/sabre/hd/resources/images/page_code.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Execute Workflow"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -154,34 +180,42 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel10" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel3" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jLabel7" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtRequestTitle" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
-                                  <Component id="cmbBusinessUnit" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
-                                  <Component id="cmbSystem" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
-                                  <Component id="txtPrimaveraId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
-                                  <Component id="scrollSRList" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
-                                  <Component id="txtFRCRId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
-                                  <Component id="txtSEDIId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                  <Component id="jLabel10" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel3" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="jLabel4" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                          <Component id="jLabel11" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txtRequestTitle" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                          <Component id="cmbBusinessUnit" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                          <Component id="cmbSystem" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                          <Component id="txtPrimaveraId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                          <Component id="scrollSRList" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                                          <Component id="txtFRCRId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                          <Component id="txtSEDIId" alignment="0" min="-2" pref="220" max="-2" attributes="1"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel18" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="txtSRName" min="-2" pref="220" max="-2" attributes="1"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel18" min="-2" pref="110" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="txtSRName" min="-2" pref="220" max="-2" attributes="1"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="lBgImage" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="21" max="32767" attributes="0"/>
@@ -231,7 +265,9 @@
                           <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtSEDIId" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="135" max="32767" attributes="0"/>
+                      <EmptySpace pref="37" max="32767" attributes="0"/>
+                      <Component id="lBgImage" min="-2" pref="87" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -324,6 +360,13 @@
             <Component class="javax.swing.JLabel" name="jLabel18">
               <Properties>
                 <Property name="text" type="java.lang.String" value="SR Name"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lBgImage">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/com/sabre/hd/resources/images/2.png"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>
