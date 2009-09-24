@@ -12,14 +12,11 @@
 package com.sabre.hd.gui;
 
 import com.sabre.hd.easysr.Facade;
-import com.sabre.hd.easysr.forms.EcpmNewChange;
-import com.sabre.hd.easysr.forms.EdssrtServiceRequest;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import com.sabre.hd.easysr.entities.*;
 import com.sabre.hd.easysr.Facade.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 /**
  *
  * @author SG0894180
@@ -676,7 +673,6 @@ public class NewSRTemplate extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSRNameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
       if (lstSRTemplates.getSelectedIndex()==-1) {
         JOptionPane.showMessageDialog(this,
           "Please select an SR Template first!",
@@ -686,13 +682,16 @@ public class NewSRTemplate extends javax.swing.JFrame {
       else {
         ServiceRequest aServiceRequest = (ServiceRequest) lstSRTemplates.getSelectedValue();
         Facade.executeSeleniumSR(aServiceRequest);
-      }
-    
+      }    
 }//GEN-LAST:event_jButton1ActionPerformed
 
     private void lstSRTemplatesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstSRTemplatesValueChanged
+      try {
         ServiceRequest unSR = (ServiceRequest) lstSRTemplates.getSelectedValue();
         fillSRFields(unSR);
+      } catch (Exception e) {
+        
+      }        
     }//GEN-LAST:event_lstSRTemplatesValueChanged
 
     /**
