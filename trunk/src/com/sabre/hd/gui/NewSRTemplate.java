@@ -12,6 +12,8 @@
 package com.sabre.hd.gui;
 
 import com.sabre.hd.easysr.Facade;
+import com.sabre.hd.easysr.forms.EcpmNewChange;
+import com.sabre.hd.easysr.forms.EdssrtServiceRequest;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import com.sabre.hd.easysr.entities.*;
@@ -43,6 +45,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     btnLoad = new javax.swing.JButton();
     btnNew = new javax.swing.JButton();
     btnClose = new javax.swing.JButton();
+    jButton1 = new javax.swing.JButton();
     jTabbedPane1 = new javax.swing.JTabbedPane();
     jPanel2 = new javax.swing.JPanel();
     cmbBusinessUnit = new javax.swing.JComboBox();
@@ -62,6 +65,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     txtRequestTitle = new javax.swing.JTextField();
     txtSRName = new javax.swing.JTextField();
     jLabel18 = new javax.swing.JLabel();
+    lBgImage = new javax.swing.JLabel();
     jPanel3 = new javax.swing.JPanel();
     jLabel15 = new javax.swing.JLabel();
     txtVP = new javax.swing.JTextField();
@@ -107,11 +111,12 @@ public class NewSRTemplate extends javax.swing.JFrame {
     lstSRTemplates = new javax.swing.JList(srTemplatesList);
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-    setFont(new java.awt.Font("Verdana", 0, 10));
+    setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
 
     jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14));
     jLabel1.setText("New SR Template");
 
+    btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/disk.png"))); // NOI18N
     btnSave.setText("Save");
     btnSave.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +124,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
       }
     });
 
+    btnLoad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/folder_add.png"))); // NOI18N
     btnLoad.setText("Load");
     btnLoad.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +132,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
       }
     });
 
+    btnNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/page.png"))); // NOI18N
     btnNew.setText("New");
     btnNew.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,10 +140,19 @@ public class NewSRTemplate extends javax.swing.JFrame {
       }
     });
 
+    btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/cancel.png"))); // NOI18N
     btnClose.setText("Close");
     btnClose.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnCloseActionPerformed(evt);
+      }
+    });
+
+    jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/page_code.png"))); // NOI18N
+    jButton1.setText("Execute Workflow");
+    jButton1.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jButton1ActionPerformed(evt);
       }
     });
 
@@ -146,11 +162,12 @@ public class NewSRTemplate extends javax.swing.JFrame {
       jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel4Layout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addComponent(btnSave, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-          .addComponent(btnLoad, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-          .addComponent(btnNew, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-          .addComponent(btnClose, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
+        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
         .addContainerGap())
     );
     jPanel4Layout.setVerticalGroup(
@@ -164,6 +181,8 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addComponent(btnNew)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(btnClose)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jButton1)
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
@@ -203,35 +222,42 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     jLabel18.setText("SR Name");
 
+    lBgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/2.png"))); // NOI18N
+
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
     jPanel2.setLayout(jPanel2Layout);
     jPanel2Layout.setHorizontalGroup(
       jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel2Layout.createSequentialGroup()
-        .addContainerGap()
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addGroup(jPanel2Layout.createSequentialGroup()
+            .addContainerGap()
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, 18)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(scrollSRList, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+              .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(scrollSRList, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+              .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtSRName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
           .addGroup(jPanel2Layout.createSequentialGroup()
-            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18)
-            .addComponent(txtSRName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGap(36, 36, 36)
+            .addComponent(lBgImage)))
         .addContainerGap(21, Short.MAX_VALUE))
     );
     jPanel2Layout.setVerticalGroup(
@@ -269,7 +295,9 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel11)
           .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(135, Short.MAX_VALUE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+        .addComponent(lBgImage, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
     );
 
     jTabbedPane1.addTab("Request Info", jPanel2);
@@ -639,6 +667,21 @@ public class NewSRTemplate extends javax.swing.JFrame {
       // TODO add your handling code here:
     }//GEN-LAST:event_txtSRNameActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+      if (lstSRTemplates.getSelectedIndex()==-1) {
+        JOptionPane.showMessageDialog(this,
+          "Please select an SR Template first!",
+          "Error",
+          JOptionPane.WARNING_MESSAGE);
+      }
+      else {
+        ServiceRequest aServiceRequest = (ServiceRequest) lstSRTemplates.getSelectedValue();
+        Facade.executeSeleniumSR(aServiceRequest);
+      }
+    
+}//GEN-LAST:event_jButton1ActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -677,6 +720,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JCheckBox chkRequireWebHosting;
   private javax.swing.JComboBox cmbBusinessUnit;
   private javax.swing.JComboBox cmbSystem;
+  private javax.swing.JButton jButton1;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel10;
   private javax.swing.JLabel jLabel11;
@@ -702,6 +746,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JScrollPane jScrollPane2;
   private javax.swing.JScrollPane jScrollPane3;
   private javax.swing.JTabbedPane jTabbedPane1;
+  private javax.swing.JLabel lBgImage;
   private javax.swing.JList lstSRTemplates;
   private javax.swing.JScrollPane scrollSRList;
   private javax.swing.JTextField txtFRCRId;

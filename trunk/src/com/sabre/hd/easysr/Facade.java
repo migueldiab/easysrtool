@@ -8,6 +8,7 @@ package com.sabre.hd.easysr;
 import com.sabre.hd.easysr.entities.Demo;
 import com.sabre.hd.easysr.entities.ServiceRequest;
 import com.sabre.hd.easysr.entities.ChangeRequest;
+import com.sabre.hd.easysr.forms.SeleniumLauncher;
 import com.sabre.hd.gui.NewCRTemplate;
 import com.sabre.hd.gui.NewSRTemplate;
 
@@ -17,8 +18,12 @@ import com.sabre.hd.gui.NewSRTemplate;
  */
 public class Facade {
 
-  public static void createMySR() {
-    ServiceRequest.launchSRCreation();
+  public static void executeSeleniumCR(ChangeRequest aChangeRequest) {
+    SeleniumLauncher.executeCR(aChangeRequest);
+  }
+
+  public static void executeSeleniumSR(ServiceRequest aServiceRequest) {
+    SeleniumLauncher.executeSR(aServiceRequest);
   }
 
   public static void newSRTemplate() {

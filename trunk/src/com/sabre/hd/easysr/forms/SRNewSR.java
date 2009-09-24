@@ -1,5 +1,7 @@
 package com.sabre.hd.easysr.forms;
 
+import com.sabre.hd.easysr.entities.ServiceRequest;
+
 public class SRNewSR extends ServiceRequestRobot{
 		  		
 	  public SRNewSR(){
@@ -23,4 +25,8 @@ public class SRNewSR extends ServiceRequestRobot{
 			logger.error(e);  
 	  	  }		  
 	  }
+
+  void setEntity(ServiceRequest aServiceRequest) {
+    throw new UnsupportedOperationException("Not yet implemented");
+  }
 }
