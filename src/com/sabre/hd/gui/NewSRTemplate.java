@@ -545,6 +545,11 @@ public class NewSRTemplate extends javax.swing.JFrame {
         jTabbedPane1.addTab("Business Info", jPanel1);
 
         lstSRTemplates.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        lstSRTemplates.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                lstSRTemplatesValueChanged(evt);
+            }
+        });
         jScrollPane3.setViewportView(lstSRTemplates);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -681,6 +686,11 @@ public class NewSRTemplate extends javax.swing.JFrame {
       }
     
 }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void lstSRTemplatesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_lstSRTemplatesValueChanged
+        ServiceRequest unSR = (ServiceRequest) lstSRTemplates.getSelectedValue();
+        fillSRFields(unSR);
+    }//GEN-LAST:event_lstSRTemplatesValueChanged
 
     /**
     * @param args the command line arguments
