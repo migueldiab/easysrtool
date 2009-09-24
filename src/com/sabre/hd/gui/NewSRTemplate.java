@@ -785,7 +785,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
   }
 
   private ServiceRequest cargaUnSr() {
-	  ServiceRequest aServiceRequest = new ServiceRequest();
+    ServiceRequest aServiceRequest = new ServiceRequest();
     aServiceRequest.setName("Mi primer SR");
     aServiceRequest.setRequestTitle("txtRequestTitle");
     aServiceRequest.setRequestOverview("txtRequestOverview");

@@ -12,12 +12,10 @@ package com.sabre.hd.easysr.entities;
 public class Demo {
 
 
-     private ServiceRequest cargaUnSr() {
+     public ServiceRequest cargaUnSr() {
 
     ServiceRequest aServiceRequestCert = new ServiceRequest();
     ServiceRequest aServiceRequestProd = new ServiceRequest();
-    ChangeRequest aChangeRequestCert = new ChangeRequest();
-    ChangeRequest aChangeRequestProd = new ChangeRequest();
 
     aServiceRequestCert.setRequestTitle("EMG (D) schema change AC cargomax on PROD");
     aServiceRequestCert.setRequestOverview("DB schema change needed to promote current CMX version from cert to prod Change must be execute during client off hours and app daemons downDBA and app tema must coordinate a proper date/time for execution scripts must be executed by cmxadmin user (app team does not know the schema owner password");
@@ -55,25 +53,30 @@ public class Demo {
     aServiceRequestCert.setRequireStorage(false);
     aServiceRequestCert.setRequireWebHosting(false);
 
+    return aServiceRequestCert;
+  }
+    public  ChangeRequest cargaUnCr(){
 
+    ChangeRequest aChangeRequestCert = new ChangeRequest();
+    ChangeRequest aChangeRequestProd = new ChangeRequest();
     aChangeRequestCert.setPhoneNumber("598 2 518 6342");
     aChangeRequestCert.setEmployeeId("203705");
     aChangeRequestCert.setManagerId("426528");
-    aChangeRequestCert.setSponsor("Sabre");
+    //aChangeRequestCert.setSponsor("Sabre");
     aChangeRequestCert.setSignificantChange(true);
     aChangeRequestCert.setServiceRequestId("Impl1");
-    aChangeRequestCert.setEnvironment("Certification");
+    //aChangeRequestCert.setEnvironment("Certification");
     aChangeRequestCert.setImplementationLocation("98234987264876  TCC - TULSA COMPUTER CENTER");
     aChangeRequestCert.setChangeName("Deploy cargomax GUI for AC");
     aChangeRequestCert.setDescription("This is needed to resolve issues reported by the customer, a new version of the software needs to be installed. Pre Implementation Test Plan:Software was tested by Sabre on  cert and dev enviroment");
     aChangeRequestCert.setAssets("AIPSNC11");
     aChangeRequestCert.setPotentialCustomersImpacted("SBI");
-    aChangeRequestCert.setCurrentStatus("SAVED AS DRAFT");
-    aChangeRequestCert.setComponentType("APPLICATION");
-    aChangeRequestCert.setState("PRODUCTION");
-    aChangeRequestCert.setActivity("CORRECTIVE MAINTENANCE");
+    aChangeRequestCert.setCurrentStatus("label=SAVED AS DRAFT");
+    //aChangeRequestCert.setComponentType("APPLICATION");
+    //aChangeRequestCert.setState("PRODUCTION");
+    //aChangeRequestCert.setActivity("CORRECTIVE MAINTENANCE");
     aChangeRequestCert.setChangeCategory("40.70.25  EMERGO - 4QWIK");
-    aChangeRequestCert.setPriority("URGENT");
+    //aChangeRequestCert.setPriority("URGENT");
     aChangeRequestCert.setChangeCategory("This request is needed to install a new version of the Cargospot software to resolve issues reported by the customer.");
     aChangeRequestCert.setRequestedType("PLANNED-4QWIK-SBI");
     aChangeRequestCert.setRiskReason("Low risk. New installation that effects ABC cargospot (ABC).");
@@ -92,7 +95,7 @@ public class Demo {
     aChangeRequestCert.setSecondaryEmailAddress("francisco.guella@sabre-holdings.com");
     aChangeRequestCert.setInstallerId("203705");
 
-    return aServiceRequestCert;
-  }
+    return aChangeRequestCert;
+     }
 
 }

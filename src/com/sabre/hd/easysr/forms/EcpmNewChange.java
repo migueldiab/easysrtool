@@ -36,9 +36,8 @@ public class EcpmNewChange extends ServiceRequestRobot{
 				
 				//Requester Information
 				
-				remoteControl.type("txtAdminContactPhone",cr.getPhoneNumber());
-				
-				remoteControl.type("txtAdminEmail",cr.getEmailAddress());
+				//remoteControl.type("txtAdminContactPhone",cr.getPhoneNumber());
+				//remoteControl.type("txtAdminEmail",cr.getEmailAddress());
 				remoteControl.type("txtExternalRefID",cr.getExternalReferenceId());
 				remoteControl.type("txtRequesterEmpID",cr.getEmployeeId());
 				remoteControl.type("txtRequesterMgrID",cr.getManagerId());
@@ -282,6 +281,7 @@ public class EcpmNewChange extends ServiceRequestRobot{
 			*/
 			
 		  }catch (Exception e){
+                       System.out.print(e);
 			logger.error(e);  
 	  	  }		  
 	  }

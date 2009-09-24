@@ -16,12 +16,7 @@ public class EasySR {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		try{			
-			
-//			GoogleTest gt = new GoogleTest();
-//			gt.load();
-//			gt.run();
-//			gt.finish();
+		try{
 
       EasySRMain ventanaMain = new EasySRMain();
       ventanaMain.setVisible(true);

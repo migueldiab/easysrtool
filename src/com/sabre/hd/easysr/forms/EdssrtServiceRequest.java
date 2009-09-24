@@ -92,6 +92,7 @@ public class EdssrtServiceRequest extends ServiceRequestRobot{
 			  
 			  //Save
 			  remoteControl.click("//table[4]/tbody/tr[2]/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[1]/td/font");			  												  
+                          remoteControl.close();
 			  
 		  }catch (Exception e){
 		  
