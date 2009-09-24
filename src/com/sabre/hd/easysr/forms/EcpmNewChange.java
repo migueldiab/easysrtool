@@ -1,6 +1,7 @@
 package com.sabre.hd.easysr.forms;
 
 import com.sabre.hd.easysr.entities.ChangeRequest;
+import java.awt.event.KeyEvent;
 
 public class EcpmNewChange extends ServiceRequestRobot{
 	
@@ -33,15 +34,13 @@ public class EcpmNewChange extends ServiceRequestRobot{
 				remoteControl.click("link=New Change");
 				remoteControl.waitForPageToLoad("30000");
 				remoteControl.type("txtRequesterEmpID", "203705");
-				
-				//Requester Information
-				
+                                      
 				//remoteControl.type("txtAdminContactPhone",cr.getPhoneNumber());
 				//remoteControl.type("txtAdminEmail",cr.getEmailAddress());
 				remoteControl.type("txtExternalRefID",cr.getExternalReferenceId());
 				remoteControl.type("txtRequesterEmpID",cr.getEmployeeId());
 				remoteControl.type("txtRequesterMgrID",cr.getManagerId());
-				remoteControl.type("txtRequesterName",cr.getDeveloperVendor());
+				//remoteControl.type("txtRequesterName",cr.getDeveloperVendor());
 				remoteControl.select("cboVendor",cr.getDeveloperVendor());
 				remoteControl.select("cboSponsor",cr.getSponsor());
 				remoteControl.type("txtServiceRequest",cr.getServiceRequestId());
@@ -50,6 +49,7 @@ public class EcpmNewChange extends ServiceRequestRobot{
 				
 				remoteControl.select("cboEnvironment_ID", cr.getEnvironment());
 				remoteControl.type("txtRequesterLocation",cr.getImplementationLocation());
+
 				remoteControl.type("txtChangeName",cr.getChangeName());
 				remoteControl.type("txtChangeDesc",cr.getDescription());
 				
@@ -135,19 +135,20 @@ public class EcpmNewChange extends ServiceRequestRobot{
 				remoteControl.type("txtInstallerEmpID",cr.getInstallerId());
 				//remoteControl.type("txtInstallerPhone",);
 				
-				remoteControl.type("txtBUDName",cr.getBusinessUnitDirector());
-				remoteControl.type("txtBUDPhone",cr.getBudPhoneNumber());
-				remoteControl.type("txtBUDEmail",cr.getBudEmailAddress());
+				//remoteControl.type("txtBUDName",cr.getBusinessUnitDirector());
+				//remoteControl.type("txtBUDPhone",cr.getBudPhoneNumber());
+				//remoteControl.type("txtBUDEmail",cr.getBudEmailAddress());
 				
-				remoteControl.type("txtCoverageName",cr.getCoverageName());
-				remoteControl.type("txtCoveragePhone",cr.getCoveragePhoneNumber());
-				remoteControl.type("txtCoveragePager",cr.getCoveragePagerNumber());
-				remoteControl.type("txtCoverageEmail",cr.getCoverageEmailAddress());
+				//remoteControl.type("txtCoverageName",cr.getCoverageName());
+				//remoteControl.type("txtCoveragePhone",cr.getCoveragePhoneNumber());
+				//remoteControl.type("txtCoveragePager",cr.getCoveragePagerNumber());
+				//remoteControl.type("txtCoverageEmail",cr.getCoverageEmailAddress());
 				
-				remoteControl.type("txtFALName",cr.getFuncationalAreaLead());
-				remoteControl.type("txtFALPhone",cr.getFalPhoneNumber());
-				remoteControl.type("txtFALEmail",cr.getFalEmailAddress());
+				//remoteControl.type("txtFALName",cr.getFuncationalAreaLead());
+				//remoteControl.type("txtFALPhone",cr.getFalPhoneNumber());
+				//remoteControl.type("txtFALEmail",cr.getFalEmailAddress());
 				remoteControl.click("cmdButton");
+                               
 
 			  /*
 			// login page			 

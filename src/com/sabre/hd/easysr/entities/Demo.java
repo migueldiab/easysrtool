@@ -17,7 +17,7 @@ public class Demo {
     ServiceRequest aServiceRequestCert = new ServiceRequest();
     ServiceRequest aServiceRequestProd = new ServiceRequest();
 
-    aServiceRequestCert.setRequestTitle("EMG (D) schema change AC cargomax on PROD");
+    aServiceRequestCert.setRequestTitle("EMG (D) schema change AC cargomax on Cert");
     aServiceRequestCert.setRequestOverview("DB schema change needed to promote current CMX version from cert to prod Change must be execute during client off hours and app daemons downDBA and app tema must coordinate a proper date/time for execution scripts must be executed by cmxadmin user (app team does not know the schema owner password");
     aServiceRequestCert.setBusinessUnit("Airline Solutions");
     aServiceRequestCert.setSystem("eMergo");
@@ -64,9 +64,9 @@ public class Demo {
     aChangeRequestCert.setManagerId("426528");
     //aChangeRequestCert.setSponsor("Sabre");
     aChangeRequestCert.setSignificantChange(true);
-    aChangeRequestCert.setServiceRequestId("Impl1");
+    aChangeRequestCert.setServiceRequestId("Impl");
     //aChangeRequestCert.setEnvironment("Certification");
-    aChangeRequestCert.setImplementationLocation("98234987264876  TCC - TULSA COMPUTER CENTER");
+    aChangeRequestCert.setImplementationLocation("98234987264876");
     aChangeRequestCert.setChangeName("Deploy cargomax GUI for AC");
     aChangeRequestCert.setDescription("This is needed to resolve issues reported by the customer, a new version of the software needs to be installed. Pre Implementation Test Plan:Software was tested by Sabre on  cert and dev enviroment");
     aChangeRequestCert.setAssets("AIPSNC11");
@@ -75,9 +75,9 @@ public class Demo {
     //aChangeRequestCert.setComponentType("APPLICATION");
     //aChangeRequestCert.setState("PRODUCTION");
     //aChangeRequestCert.setActivity("CORRECTIVE MAINTENANCE");
-    aChangeRequestCert.setChangeCategory("40.70.25  EMERGO - 4QWIK");
+    aChangeRequestCert.setChangeCategory("40.70.25");
     //aChangeRequestCert.setPriority("URGENT");
-    aChangeRequestCert.setChangeCategory("This request is needed to install a new version of the Cargospot software to resolve issues reported by the customer.");
+    aChangeRequestCert.setChangeJustification("This request is needed to install a new version of the Cargospot software to resolve issues reported by the customer.");
     aChangeRequestCert.setRequestedType("PLANNED-4QWIK-SBI");
     aChangeRequestCert.setRiskReason("Low risk. New installation that effects ABC cargospot (ABC).");
     aChangeRequestCert.setImpactDescription("No Impact. New installation that effects JJ CS. This installation will not effect other users or require a reboot.");
@@ -85,8 +85,8 @@ public class Demo {
     aChangeRequestCert.setPotentialRisk(2);
     aChangeRequestCert.setInstallationProcedures("Load new software - Stop cargospot service - Upgrade software - Restart cargospot service - Verification");
     aChangeRequestCert.setFallbackProcedures("Stop cargospot service - Restore software - Restart cargospot service");
-    aChangeRequestCert.setStartDate("09/24/2009");
-    aChangeRequestCert.setEndDate("09/24/2009");
+    aChangeRequestCert.setStartDate("09/28/2009");
+    aChangeRequestCert.setEndDate("09/28/2009");
     aChangeRequestCert.setStartTime("10:00");
     aChangeRequestCert.setEndTime("15:00");
     aChangeRequestCert.setDuration("01");
