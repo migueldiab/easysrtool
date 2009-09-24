@@ -17,6 +17,7 @@ public class Demo {
     ServiceRequest aServiceRequestCert = new ServiceRequest();
     ServiceRequest aServiceRequestProd = new ServiceRequest();
 
+    aServiceRequestCert.setName("The First SR");
     aServiceRequestCert.setRequestTitle("EMG (D) schema change AC cargomax on Cert");
     aServiceRequestCert.setRequestOverview("DB schema change needed to promote current CMX version from cert to prod Change must be execute during client off hours and app daemons downDBA and app tema must coordinate a proper date/time for execution scripts must be executed by cmxadmin user (app team does not know the schema owner password");
     aServiceRequestCert.setBusinessUnit("Airline Solutions");
