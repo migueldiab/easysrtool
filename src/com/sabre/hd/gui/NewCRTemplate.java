@@ -194,7 +194,7 @@ public class NewCRTemplate extends javax.swing.JFrame {
     templatesList = new DefaultListModel();
     lstCRTemplates = new javax.swing.JList(templatesList);
 
-    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
     btnClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sabre/hd/resources/images/cancel.png"))); // NOI18N
     btnClose.setText("Close");
