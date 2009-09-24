@@ -5,7 +5,9 @@
 
 package com.sabre.hd.easysr;
 
-import com.sabre.hd.easysr.entities.*;
+import com.sabre.hd.easysr.entities.Demo;
+import com.sabre.hd.easysr.entities.ServiceRequest;
+import com.sabre.hd.easysr.entities.ChangeRequest;
 import com.sabre.hd.gui.NewCRTemplate;
 import com.sabre.hd.gui.NewSRTemplate;
 
@@ -23,7 +25,7 @@ public class Facade {
     NewSRTemplate ventanaNewSRTemplate = new NewSRTemplate();
     ventanaNewSRTemplate.setVisible(true);
   }
-
+ 
   public static boolean saveSR(ServiceRequest aServiceRequest) {
     return ServiceRequest.save();
   }
@@ -42,8 +44,5 @@ public class Facade {
     Demo demo = new Demo();
     return demo.cargaUnCr();
   }
-
- //   public static void LoadDemoCR(){
-   // }
 
 }

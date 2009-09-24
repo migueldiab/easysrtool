@@ -12,10 +12,10 @@
 package com.sabre.hd.gui;
 
 import com.sabre.hd.easysr.Facade;
-import com.sabre.hd.easysr.entities.ServiceRequest;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
-
+import com.sabre.hd.easysr.entities.*;
+import com.sabre.hd.easysr.Facade.*;
 /**
  *
  * @author SG0894180
@@ -778,7 +778,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
   }
 
   private boolean loadSRTemplates() {
-    ServiceRequest aServiceRequest = cargaUnSr();
+    ServiceRequest aServiceRequest = Facade.loadDemoSR();
     srTemplatesList.clear();
     srTemplatesList.addElement(aServiceRequest);
     return true;
