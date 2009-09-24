@@ -641,4 +641,11 @@ public class ServiceRequest extends PersistentObject{
   public void setRequireWebHosting(boolean requireWebHosting) {
     this.requireWebHosting = requireWebHosting;
   }
+
+  @Override
+  public String toString() {
+    return this.getName();
+  }
+
+
 }

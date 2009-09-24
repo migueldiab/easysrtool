@@ -13,6 +13,7 @@ package com.sabre.hd.gui;
 
 import com.sabre.hd.easysr.Facade;
 import com.sabre.hd.easysr.entities.ServiceRequest;
+import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,6 +25,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     /** Creates new form NewSRTemplate */
     public NewSRTemplate() {
         initComponents();
+        loadSRTemplates();
     }
 
     /** This method is called from within the constructor to
@@ -45,7 +47,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
     jPanel2 = new javax.swing.JPanel();
     cmbBusinessUnit = new javax.swing.JComboBox();
     cmbSystem = new javax.swing.JComboBox();
-    jScrollPane1 = new javax.swing.JScrollPane();
+    scrollSRList = new javax.swing.JScrollPane();
     txtRequestOverview = new javax.swing.JTextArea();
     txtPrimaveraId = new javax.swing.JTextField();
     txtFRCRId = new javax.swing.JTextField();
@@ -58,6 +60,8 @@ public class NewSRTemplate extends javax.swing.JFrame {
     jLabel4 = new javax.swing.JLabel();
     jLabel3 = new javax.swing.JLabel();
     txtRequestTitle = new javax.swing.JTextField();
+    txtSRName = new javax.swing.JTextField();
+    jLabel18 = new javax.swing.JLabel();
     jPanel3 = new javax.swing.JPanel();
     jLabel15 = new javax.swing.JLabel();
     txtVP = new javax.swing.JTextField();
@@ -97,9 +101,13 @@ public class NewSRTemplate extends javax.swing.JFrame {
     chkRequireHardware = new javax.swing.JCheckBox();
     chkRequireStorage = new javax.swing.JCheckBox();
     chkRequireNewSoftware = new javax.swing.JCheckBox();
+    jPanel5 = new javax.swing.JPanel();
+    jScrollPane3 = new javax.swing.JScrollPane();
+    srTemplatesList = new DefaultListModel();
+    lstSRTemplates = new javax.swing.JList(srTemplatesList);
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-    setFont(new java.awt.Font("Verdana", 0, 10)); // NOI18N
+    setFont(new java.awt.Font("Verdana", 0, 10));
 
     jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14));
     jLabel1.setText("New SR Template");
@@ -119,6 +127,11 @@ public class NewSRTemplate extends javax.swing.JFrame {
     });
 
     btnNew.setText("New");
+    btnNew.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnNewActionPerformed(evt);
+      }
+    });
 
     btnClose.setText("Close");
     btnClose.addActionListener(new java.awt.event.ActionListener() {
@@ -133,11 +146,11 @@ public class NewSRTemplate extends javax.swing.JFrame {
       jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel4Layout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-          .addComponent(btnLoad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-          .addComponent(btnNew, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
-          .addComponent(btnClose, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addComponent(btnSave, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(btnLoad, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(btnNew, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+          .addComponent(btnClose, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
         .addContainerGap())
     );
     jPanel4Layout.setVerticalGroup(
@@ -151,7 +164,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addComponent(btnNew)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(btnClose)
-        .addContainerGap(323, Short.MAX_VALUE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     cmbBusinessUnit.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Airline Solutions" }));
@@ -160,7 +173,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     txtRequestOverview.setColumns(20);
     txtRequestOverview.setRows(5);
-    jScrollPane1.setViewportView(txtRequestOverview);
+    scrollSRList.setViewportView(txtRequestOverview);
 
     jLabel10.setText("FRCR #");
 
@@ -181,6 +194,14 @@ public class NewSRTemplate extends javax.swing.JFrame {
         txtRequestTitleActionPerformed(evt);
       }
     });
+
+    txtSRName.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        txtSRNameActionPerformed(evt);
+      }
+    });
+
+    jLabel18.setText("SR Name");
 
     javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
     jPanel2.setLayout(jPanel2Layout);
@@ -204,21 +225,29 @@ public class NewSRTemplate extends javax.swing.JFrame {
               .addComponent(cmbBusinessUnit, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addComponent(cmbSystem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addComponent(txtPrimaveraId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(scrollSRList, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addComponent(txtFRCRId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        .addContainerGap())
+              .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+          .addGroup(jPanel2Layout.createSequentialGroup()
+            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18)
+            .addComponent(txtSRName, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addContainerGap(21, Short.MAX_VALUE))
     );
     jPanel2Layout.setVerticalGroup(
       jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jPanel2Layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel18)
+          .addComponent(txtSRName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel3)
           .addComponent(txtRequestTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(scrollSRList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jLabel4))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -240,7 +269,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jLabel11)
           .addComponent(txtSEDIId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(161, Short.MAX_VALUE))
+        .addContainerGap(135, Short.MAX_VALUE))
     );
 
     jTabbedPane1.addTab("Request Info", jPanel2);
@@ -487,6 +516,26 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
     jTabbedPane1.addTab("Business Info", jPanel1);
 
+    lstSRTemplates.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+    jScrollPane3.setViewportView(lstSRTemplates);
+
+    javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+    jPanel5.setLayout(jPanel5Layout);
+    jPanel5Layout.setHorizontalGroup(
+      jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel5Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+        .addContainerGap())
+    );
+    jPanel5Layout.setVerticalGroup(
+      jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jPanel5Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(12, Short.MAX_VALUE))
+    );
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
     layout.setHorizontalGroup(
@@ -494,11 +543,13 @@ public class NewSRTemplate extends javax.swing.JFrame {
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+          .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE)
           .addGroup(layout.createSequentialGroup()
             .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+              .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         .addContainerGap())
     );
     layout.setVerticalGroup(
@@ -507,10 +558,13 @@ public class NewSRTemplate extends javax.swing.JFrame {
         .addContainerGap()
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(16, Short.MAX_VALUE))
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        .addContainerGap())
     );
 
     pack();
@@ -560,13 +614,30 @@ public class NewSRTemplate extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCloseActionPerformed
 
     private void btnLoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadActionPerformed
-      if (!loadSRTemplate()) {
+      if (lstSRTemplates.getSelectedIndex()==-1) {
         JOptionPane.showMessageDialog(this,
-          "Your SR Template could not be loaded!",
+          "Please select an SR Template first!",
+          "Error",
+          JOptionPane.WARNING_MESSAGE);
+      }
+      else {
+        ServiceRequest unSR = (ServiceRequest) lstSRTemplates.getSelectedValue();
+        fillSRFields(unSR);
+      }
+    }//GEN-LAST:event_btnLoadActionPerformed
+
+    private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
+      if (!cleanSRTemplate()) {
+        JOptionPane.showMessageDialog(this,
+          "Your SR Template could not be cleaned!",
           "Error",
           JOptionPane.ERROR_MESSAGE);
       }
-    }//GEN-LAST:event_btnLoadActionPerformed
+    }//GEN-LAST:event_btnNewActionPerformed
+
+    private void txtSRNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSRNameActionPerformed
+      // TODO add your handling code here:
+    }//GEN-LAST:event_txtSRNameActionPerformed
 
     /**
     * @param args the command line arguments
@@ -615,6 +686,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JLabel jLabel15;
   private javax.swing.JLabel jLabel16;
   private javax.swing.JLabel jLabel17;
+  private javax.swing.JLabel jLabel18;
   private javax.swing.JLabel jLabel3;
   private javax.swing.JLabel jLabel4;
   private javax.swing.JLabel jLabel5;
@@ -626,9 +698,12 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JPanel jPanel2;
   private javax.swing.JPanel jPanel3;
   private javax.swing.JPanel jPanel4;
-  private javax.swing.JScrollPane jScrollPane1;
+  private javax.swing.JPanel jPanel5;
   private javax.swing.JScrollPane jScrollPane2;
+  private javax.swing.JScrollPane jScrollPane3;
   private javax.swing.JTabbedPane jTabbedPane1;
+  private javax.swing.JList lstSRTemplates;
+  private javax.swing.JScrollPane scrollSRList;
   private javax.swing.JTextField txtFRCRId;
   private javax.swing.JTextField txtFundingCostCenter;
   private javax.swing.JTextField txtImplDate;
@@ -639,11 +714,13 @@ public class NewSRTemplate extends javax.swing.JFrame {
   private javax.swing.JTextField txtRequestor;
   private javax.swing.JTextArea txtRequirements;
   private javax.swing.JTextField txtSEDIId;
+  private javax.swing.JTextField txtSRName;
   private javax.swing.JTextField txtSabreAR;
   private javax.swing.JTextField txtSabrePR;
   private javax.swing.JTextField txtVP;
   // End of variables declaration//GEN-END:variables
-
+  private DefaultListModel srTemplatesList = null;
+  
   private boolean saveSRTemplate() {
     if (!checkSRFields()) {
       return false;
@@ -661,6 +738,7 @@ public class NewSRTemplate extends javax.swing.JFrame {
 
   private ServiceRequest fillSRObject() {
     ServiceRequest aServiceRequest = new ServiceRequest();
+    aServiceRequest.setName(this.txtSRName.getText());
     aServiceRequest.setRequestTitle(this.txtRequestTitle.getText());
     aServiceRequest.setRequestOverview(this.txtRequestOverview.getText());
     aServiceRequest.setBusinessUnit(this.cmbBusinessUnit.getSelectedItem().toString());
@@ -699,52 +777,56 @@ public class NewSRTemplate extends javax.swing.JFrame {
     return aServiceRequest;
   }
 
-  private boolean loadSRTemplate() {
-    ServiceRequest aServiceRequest = cargaUnSr();    
-    return fillSRFields(aServiceRequest);
+  private boolean loadSRTemplates() {
+    ServiceRequest aServiceRequest = cargaUnSr();
+    srTemplatesList.clear();
+    srTemplatesList.addElement(aServiceRequest);
+    return true;
   }
 
   private ServiceRequest cargaUnSr() {
 	  ServiceRequest aServiceRequest = new ServiceRequest();
-    aServiceRequest.setRequestTitle("EMG (D) schema change AC cargomax on PROD");
-    aServiceRequest.setRequestOverview("DB schema change needed to promote current CMX version from cert to prod Change must be execute during client off hours and app daemons downDBA and app tema must coordinate a proper date/time for execution scripts must be executed by cmxadmin user (app team does not know the schema owner password");
-    aServiceRequest.setBusinessUnit("Airline Solutions");
-    aServiceRequest.setSystem("eMergo");
-    aServiceRequest.setPrimaveraId("p_15717");
-    aServiceRequest.setFRCR("");
-    aServiceRequest.setSEDI("");
-    aServiceRequest.setSabreAR("");
-    aServiceRequest.setSabrePR("");
-    aServiceRequest.setOwningCostCenter("9014664");
-    aServiceRequest.setFundingCostCenter("9014664");
-    aServiceRequest.setRequestor("LUCAS, MARCOS");
+    aServiceRequest.setName("Mi primer SR");
+    aServiceRequest.setRequestTitle("txtRequestTitle");
+    aServiceRequest.setRequestOverview("txtRequestOverview");
+    aServiceRequest.setBusinessUnit("cmbBusinessUnit");
+    aServiceRequest.setSystem("cmbSystem");
+    aServiceRequest.setPrimaveraId("txtPrimaveraId");
+    aServiceRequest.setFRCR("txtFRCRId");
+    aServiceRequest.setSEDI("txtSEDIId");
+    aServiceRequest.setSabreAR("txtSabreAR");
+    aServiceRequest.setSabrePR("txtSabrePR");
+    aServiceRequest.setOwningCostCenter("txtOwningCostCenter");
+    aServiceRequest.setFundingCostCenter("txtFundingCostCenter");
+    aServiceRequest.setRequestor("txtRequestor");
     aServiceRequest.setVP("txtVP");
     aServiceRequest.setRequirements("txtRequirements");
-    aServiceRequest.setImplDate("9/25/2009");
-    aServiceRequest.setCRUDActiveDirectory(false);
-    aServiceRequest.setEDSAlreadyEngaged(false);
-    aServiceRequest.setImpactHost(false);
-    aServiceRequest.setImplDateASAP(false);
-    aServiceRequest.setInvolvePCI(false);
-    aServiceRequest.setRequestorLoggedUser(false);
-    aServiceRequest.setRequireAccess2VAR(false);
-    aServiceRequest.setRequireApplicationChange(false);
-    aServiceRequest.setRequireB2BVPN(false);
-    aServiceRequest.setRequireFirewallChange(false);
-    aServiceRequest.setRequireHardware(false);
-    aServiceRequest.setRequireIncreaseTransactions(false);
-    aServiceRequest.setRequireNewCircuit(false);
-    aServiceRequest.setRequireNewSoftware(false);
-    aServiceRequest.setRequireOfficeOpening(false);
-    aServiceRequest.setRequireReport(false);
-    aServiceRequest.setRequireSSL(false);
-    aServiceRequest.setRequireSecurityException(false);
-    aServiceRequest.setRequireStorage(false);
-    aServiceRequest.setRequireWebHosting(false);
+    aServiceRequest.setImplDate("txtImplDate");
+    aServiceRequest.setCRUDActiveDirectory(true);
+    aServiceRequest.setEDSAlreadyEngaged(true);
+    aServiceRequest.setImpactHost(true);
+    aServiceRequest.setImplDateASAP(true);
+    aServiceRequest.setInvolvePCI(true);
+    aServiceRequest.setRequestorLoggedUser(true);
+    aServiceRequest.setRequireAccess2VAR(true);
+    aServiceRequest.setRequireApplicationChange(true);
+    aServiceRequest.setRequireB2BVPN(true);
+    aServiceRequest.setRequireFirewallChange(true);
+    aServiceRequest.setRequireHardware(true);
+    aServiceRequest.setRequireIncreaseTransactions(true);
+    aServiceRequest.setRequireNewCircuit(true);
+    aServiceRequest.setRequireNewSoftware(true);
+    aServiceRequest.setRequireOfficeOpening(true);
+    aServiceRequest.setRequireReport(true);
+    aServiceRequest.setRequireSSL(true);
+    aServiceRequest.setRequireSecurityException(true);
+    aServiceRequest.setRequireStorage(true);
+    aServiceRequest.setRequireWebHosting(true);
     return aServiceRequest;
   }
 
   private boolean fillSRFields(ServiceRequest aServiceRequest) {
+    this.txtSRName.setText(aServiceRequest.getName());
     this.txtRequestTitle.setText(aServiceRequest.getRequestTitle());
     this.txtRequestOverview.setText(aServiceRequest.getRequestOverview());
     this.cmbBusinessUnit.setSelectedItem(aServiceRequest.getBusinessUnit());
@@ -781,6 +863,47 @@ public class NewSRTemplate extends javax.swing.JFrame {
     this.chkRequireStorage.setSelected(aServiceRequest.isRequireStorage());
     this.chkRequireWebHosting.setSelected(aServiceRequest.isRequireWebHosting());
     return true;
+  }
+
+  private boolean cleanSRTemplate() {
+    this.txtSRName.setText("");
+    this.txtRequestTitle.setText("");
+    this.txtRequestOverview.setText("");
+    this.cmbBusinessUnit.setSelectedItem("");
+    this.cmbSystem.setSelectedItem("");
+    this.txtPrimaveraId.setText("");
+    this.txtFRCRId.setText("");
+    this.txtSEDIId.setText("");
+    this.txtSabreAR.setText("");
+    this.txtSabrePR.setText("");
+    this.txtOwningCostCenter.setText("");
+    this.txtFundingCostCenter.setText("");
+    this.txtRequestor.setText("");
+    this.txtVP.setText("");
+    this.txtRequirements.setText("");
+    this.txtImplDate.setText("");
+    this.chkCRUDActiveDirectory.setSelected(false);
+    this.chkEDSAlreadyEngaged.setSelected(false);
+    this.chkImpactHost.setSelected(false);
+    this.chkImplDateASAP.setSelected(false);
+    this.chkInvolvePCI.setSelected(false);
+    this.chkRequestorLoggedUser.setSelected(false);
+    this.chkRequireAccess2VAR.setSelected(false);
+    this.chkRequireApplicationChange.setSelected(false);
+    this.chkRequireB2BVPN.setSelected(false);
+    this.chkRequireFirewallChange.setSelected(false);
+    this.chkRequireHardware.setSelected(false);
+    this.chkRequireIncreaseTransactions.setSelected(false);
+    this.chkRequireNewCircuit.setSelected(false);
+    this.chkRequireNewSoftware.setSelected(false);
+    this.chkRequireOfficeOpening.setSelected(false);
+    this.chkRequireReport.setSelected(false);
+    this.chkRequireSSL.setSelected(false);
+    this.chkRequireSecurityException.setSelected(false);
+    this.chkRequireStorage.setSelected(false);
+    this.chkRequireWebHosting.setSelected(false);
+    return true;
+
   }
 
 }
