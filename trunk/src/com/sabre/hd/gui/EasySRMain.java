@@ -174,7 +174,7 @@ public class EasySRMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNewCRTemplateActionPerformed
 
     private void btnNewCRTemplate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewCRTemplate1ActionPerformed
-      // TODO add your handling code here:
+      Facade.newWorkflow();
     }//GEN-LAST:event_btnNewCRTemplate1ActionPerformed
 
     /**

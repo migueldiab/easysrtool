@@ -12,6 +12,7 @@ import com.sabre.hd.easysr.peer.ChangeRequestPeer;
 import com.sabre.hd.easysr.peer.ServiceRequestPeer;
 import com.sabre.hd.gui.NewCRTemplate;
 import com.sabre.hd.gui.NewSRTemplate;
+import com.sabre.hd.gui.NewWorkflow;
 import java.util.ArrayList;
 
 /**
@@ -48,6 +49,15 @@ public class Facade {
 
   public static ArrayList<ChangeRequest> getAllChangeRequests() {
     return ChangeRequestPeer.getAll();
+  }
+
+  public static void newWorkflow() {
+    NewWorkflow ventanaNewWorkflow = new NewWorkflow();
+    ventanaNewWorkflow.setVisible(true);
+  }
+
+  public static void executeSeleniumWorkflow() {
+    SeleniumLauncher.executeWorkflow();
   }
 
 }
