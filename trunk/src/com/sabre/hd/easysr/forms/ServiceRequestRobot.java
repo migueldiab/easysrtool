@@ -36,7 +36,7 @@ public class ServiceRequestRobot {
     	//remoteControl.waitForPageToLoad("90000");	          	                   	        
     }
     
-    public void finish() throws Exception{
+    public void finish() {
     	try{
     		remoteControl.stop();
     	}catch (Exception e){

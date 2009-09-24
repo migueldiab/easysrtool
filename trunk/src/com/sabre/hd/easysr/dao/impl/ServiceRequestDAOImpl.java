@@ -163,42 +163,55 @@ public class ServiceRequestDAOImpl implements ServiceRequestDAO {
 	@Override
 	public void insertServiceRequest(ServiceRequest servicerequest) {
 
-		PreparedStatement stmtInsert = null;
+		PreparedStatement stmtInsertForm = null;
+                PreparedStatement stmtInsertFormField = null;
 
 		Connection conn = DataSource.getConnection();
 
 		try {
-			StringBuffer sbInsert = new StringBuffer();
-			sbInsert.append("INSERT INTO ");
-			sbInsert.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
+			StringBuffer sbInsertForm = new StringBuffer();
+			sbInsertForm.append("INSERT INTO ");
+			sbInsertForm.append(ServiceRequestDAOImpl.TABLE_NAME_FORM);
 			
-			//TODO: Modificar los attr para hacer el insert
-			
-			sbInsert.append(" ( servicerequest_id, attrName1, attrName2 ) ");
-			sbInsert.append(" VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			sbInsertForm.append(" ( name, url) ");
+			sbInsertForm.append(" VALUES (?,?)");
+                        
+                        stmtInsertForm = conn.prepareStatement(sbInsertForm.toString());
+			stmtInsertForm.setString(1, servicerequest.getName());
+			stmtInsertForm.setString(2, servicerequest.getUrl());
 
-			stmtInsert = conn.prepareStatement(sbInsert.toString());
+                        logger.info("About to execute INSERT: values " + servicerequest.toString());
 
-			//stmtInsert.setString(1, servicerequest.getAttName1());
-			//stmtInsert.setString(2, servicerequest.getAttName2());
-			//stmtInsert.setString(3, servicerequest.getAttName3());
-			//stmtInsert.setString(4, servicerequest.getAttName4());			
-			//);
-
-			logger.info("About to execute INSERT: values "
-					+ servicerequest.toString());
-
-			int rows = stmtInsert.executeUpdate();
+                        int rows = stmtInsertForm.executeUpdate();
 
 			if (rows != 1) {
 				throw new SQLException("executeUpdate return value: " + rows);
 			}
 
+                        int autoIncValue = -1;
+
+                        ResultSet rs = stmtInsertForm.getGeneratedKeys();
+                        if (rs.next()) {
+                        autoIncValue = rs.getInt(1);
+                        } else {
+                            rs.close();
+
+                        }
+
+                        StringBuffer sbInsertFormFields = new StringBuffer();
+			sbInsertFormFields.append("INSERT INTO ");
+			sbInsertFormFields.append(ServiceRequestDAOImpl.TABLE_NAME_FORM_FIELDS);
+			sbInsertFormFields.append(" ( name, form_id) ");
+			sbInsertFormFields.append(" VALUES (?,?)");
+                        stmtInsertFormField = conn.prepareStatement(sbInsertFormFields.toString());
+                        stmtInsertFormField.setString(1, servicerequest.getName());
+			stmtInsertFormField.setString(2, servicerequest.getUrl());
+
 		} catch (SQLException ex) {
 			logger.error(ex);
 			throw new DAORuntimeException(ex);
 		} finally {
-			DBUtil.closeStatement(stmtInsert);
+			DBUtil.closeStatement(stmtInsertForm);
 			DBUtil.closeJDBCConnection(conn);
 		}
 

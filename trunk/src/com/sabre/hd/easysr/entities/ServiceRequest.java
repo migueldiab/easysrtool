@@ -173,11 +173,11 @@ public class ServiceRequest extends PersistentObject{
   }
   
   public String getRequestOverview() {
-    return url;
+    return requestOverview;
   }
 
-  public void setRequestOverview(String url) {
-    this.url = url;
+  public void setRequestOverview(String requestOverview) {
+    this.requestOverview = requestOverview;
   }
 
   /**
