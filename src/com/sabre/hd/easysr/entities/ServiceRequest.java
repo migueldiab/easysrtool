@@ -6,7 +6,7 @@ import com.sabre.hd.easysr.persistence.dao.ServiceRequestDAO;
 import com.sabre.hd.easysr.persitence.DAOFactory;
 import com.sabre.hd.easysr.persitence.PersistentObject;
 import java.sql.Date;
-
+import com.sabre.hd.easysr.xml.*;
 
 public class ServiceRequest extends PersistentObject{
 	
@@ -59,6 +59,52 @@ public class ServiceRequest extends PersistentObject{
   public ServiceRequest ()
 	{
     
+  }
+
+  public ServiceRequest(String url, String name,String path){
+      this.setUrl(url);
+      this.setName(name);
+
+      XmlTemplateReader xtr = new XmlTemplateReader(path);
+      this.setRequestTitle(xtr.getFieldValue("requestTitle"));
+      this.setRequestOverview(xtr.getFieldValue("requestOverview"));
+      this.setBusinessUnit(xtr.getFieldValue("businessUnit"));
+      this.setSystem(xtr.getFieldValue("system"));
+      this.setPrimaveraId(xtr.getFieldValue("primaveraId"));
+      this.setFRCR(xtr.getFieldValue("FRCR"));
+      this.setSEDI(xtr.getFieldValue("SEDI"));
+      this.setSabreAR(xtr.getFieldValue("sabreAR"));
+      this.setSabrePR(xtr.getFieldValue("sabrePR"));
+      this.setOwningCostCenter(xtr.getFieldValue("owningCostCenter"));
+      this.setFundingCostCenter(xtr.getFieldValue("fundingCostCenter"));
+      this.setRequestor(xtr.getFieldValue("requestor"));
+      this.setVP(xtr.getFieldValue("VP"));
+      this.setRequirements(xtr.getFieldValue("requirements"));
+      this.setImplDate(xtr.getFieldValue("implDate"));
+
+      // el metodo getFieldValue devuelve un string, y no un boolean. Por eso
+      // pasamos estps parametros de la misma manera que el constructor de abajo;
+            this.setCRUDActiveDirectory(CRUDActiveDirectory);
+            this.setEDSAlreadyEngaged(EDSAlreadyEngaged);
+            this.setImpactHost(impactHost);
+            this.setImplDateASAP(implDateASAP);
+            this.setInvolvePCI(involvePCI);
+            this.setRequestorLoggedUser(requestorLoggedUser);
+            this.setRequireAccess2VAR(requireAccess2VAR);
+            this.setRequireApplicationChange(requireApplicationChange);
+            this.setRequireB2BVPN(requireB2BVPN);
+            this.setRequireFirewallChange(requireFirewallChange);
+            this.setRequireHardware(requireHardware);
+            this.setRequireIncreaseTransactions(requireIncreaseTransactions);
+            this.setRequireNewCircuit(requireNewCircuit);
+            this.setRequireNewSoftware(requireNewSoftware);
+            this.setRequireOfficeOpening(requireOfficeOpening);
+            this.setRequireReport(requireReport);
+            this.setRequireSSL(requireSSL);
+            this.setRequireSecurityException(requireSecurityException);
+            this.setRequireStorage(requireStorage);
+            this.setRequireWebHosting(requireWebHosting);
+
   }
 
 	public ServiceRequest (String url, String name, String requestTitle,   String requestOverview,   String businessUnit,   String system,   String primaveraId,   String FRCR,   String SEDI,   String sabreAR,   String sabrePR,   String owningCostCenter,   String fundingCostCenter,   String requestor,   String VP,   String requirements,   String   implDate,   boolean CRUDActiveDirectory,   boolean EDSAlreadyEngaged,   boolean impactHost,   boolean implDateASAP,   boolean involvePCI,   boolean requestorLoggedUser,   boolean requireAccess2VAR,   boolean requireApplicationChange,   boolean requireB2BVPN,   boolean requireFirewallChange,   boolean requireHardware,   boolean requireIncreaseTransactions,   boolean requireNewCircuit,   boolean requireNewSoftware,   boolean requireOfficeOpening,   boolean requireReport,   boolean requireSSL,   boolean requireSecurityException,   boolean requireStorage,   boolean requireWebHosting)
