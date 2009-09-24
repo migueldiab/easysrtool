@@ -13,8 +13,7 @@ package com.sabre.hd.gui;
 
 import com.sabre.hd.easysr.Facade;
 import com.sabre.hd.easysr.entities.ChangeRequest;
-import com.sabre.hd.easysr.forms.EcpmNewChange;
-import com.sabre.hd.easysr.forms.EdssrtServiceRequest;
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 
@@ -27,6 +26,7 @@ public class NewCRTemplate extends javax.swing.JFrame {
     /** Creates new form NewCRTemplate */
     public NewCRTemplate() {
         initComponents();
+        loadCRTemplates();
     }
 
     /** This method is called from within the constructor to
@@ -1300,8 +1300,16 @@ public class NewCRTemplate extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoadActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      ChangeRequest aChangeRequest = Facade.loadDemoCR();
-      Facade.executeSeleniumCR(aChangeRequest);
+      if (lstCRTemplates.getSelectedIndex()==-1) {
+        JOptionPane.showMessageDialog(this,
+          "Please select a CR Template first!",
+          "Error",
+          JOptionPane.WARNING_MESSAGE);
+      }
+      else {
+        ChangeRequest aChangeRequest = (ChangeRequest) lstCRTemplates.getSelectedValue();
+        Facade.executeSeleniumCR(aChangeRequest);
+      }
       
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1477,6 +1485,14 @@ public class NewCRTemplate extends javax.swing.JFrame {
 
   private boolean saveSRTemplate() {
     return true;
+  }
+
+  private void loadCRTemplates() {
+    templatesList.clear();
+    ArrayList<ChangeRequest> allChangeRequests = Facade.getAllChangeRequests();
+    for (ChangeRequest aChangeRequest : allChangeRequests) {
+      templatesList.addElement(aChangeRequest);
+    }
   }
 
 }
