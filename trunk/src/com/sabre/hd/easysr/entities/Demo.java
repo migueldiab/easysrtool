@@ -90,6 +90,7 @@ public class Demo {
     aChangeRequestCert.setStartTime("10:00");
     aChangeRequestCert.setEndTime("15:00");
     aChangeRequestCert.setDuration("01");
+    aChangeRequestCert.setPrimaryCoordinatorName("MARCOS LUCAS");
     aChangeRequestCert.setSecondaryName("FRANCISCO GUELLA");
     aChangeRequestCert.setSecondaryPhoneNumber("59 825 182 025");
     aChangeRequestCert.setSecondaryEmailAddress("francisco.guella@sabre-holdings.com");
